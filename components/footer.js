@@ -1,8 +1,7 @@
 // Footer 组件
-// 使用 Vue 3 的方式注册组件
-if (typeof Vue !== 'undefined') {
-  Vue.component('my-footer', {
-    template: `
+class MyFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
       <footer id="footer">
         <div class="footer-content">
           <div class="container">
@@ -13,9 +12,9 @@ if (typeof Vue !== 'undefined') {
                     style="background-image: url('static/images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
                     <div><img src="static/picture/logo-dcs-white.png"
                         style="width: 197px; height: 150px; margin-bottom: 20px;"
-                        alt="吉萝卜"></div>
+                        alt="Del Corona & Scardigli"></div>
                     <p class="company-title">U. DEL CORONA &amp; SCARDIGLI S.r.l.</p>
-                    <p class="subtitle">Scali D'Azeglio 32, 57123 Livorno - ITALY</p>
+                    <p class="subtitle">Scali D’Azeglio 32, 57123 Livorno - ITALY</p>
                   </div>
                 </div>
               </div>
@@ -93,5 +92,7 @@ if (typeof Vue !== 'undefined') {
         </div>
       </footer>
     `
-  })
+  }
 }
+
+customElements.define('my-footer', MyFooter)
