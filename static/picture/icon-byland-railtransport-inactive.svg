@@ -1,0 +1,11 @@
+<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4" y="12" width="46" height="23.5" rx="2" stroke="#002E5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="15.6667" y1="12.8333" x2="15.6667" y2="34.6667" stroke="#002E5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="28.1667" y1="12.8333" x2="28.1667" y2="34.6667" stroke="#002E5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="41.5" y1="12.8333" x2="41.5" y2="34.6667" stroke="#002E5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11 42C11 43.6569 9.65685 45 8 45C6.34315 45 5 43.6569 5 42" stroke="#002E5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 42C21 43.6569 19.6569 45 18 45C16.3431 45 15 43.6569 15 42" stroke="#002E5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M39 42C39 43.6569 37.6569 45 36 45C34.3431 45 33 43.6569 33 42" stroke="#002E5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M49 42C49 43.6569 47.6569 45 46 45C44.3431 45 43 43.6569 43 42" stroke="#002E5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="50" y1="40.3333" x2="4" y2="40.3333" stroke="#002E5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,587 @@
+@charset "utf-8";
+
+/*
+*******************************************
+*******************************************
+
+[Override Stylesheet]
+
+*************************************************/
+a.mouse_over_air:hover {
+  background-color: #778899 !important;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+.order-list table.table tr th.air_bg_blue {
+  background-color: #364E76;
+}
+
+h4.air_bg_gray {
+  background-color: #778899;
+}
+
+body .ui-button.air_bg_gray_btn {
+   background: #778899;
+   border-color: #778899;
+}
+
+.air_bg_gray_link {
+   background: #778899;
+   border-color: #778899;
+}
+
+.blue_air {
+  background-color: #364E76 !important;
+}
+ 
+
+.ui-autocomplete-multiple-container {
+    width: inherit;
+}
+
+
+#localita_pickup_panel > ul > li.ui-autocomplete-item.ui-autocomplete-list-item.ui-corner-all.ui-state-highlight,
+#localita_pickup_panel > ul > li
+{
+  font-size: 0.8em !important;
+}
+
+
+.orange-splitbutton .ui-button {
+    background-color: #ff5733;
+    border-color: #ff5733;
+}
+
+.orange-splitbutton .ui-button:hover {
+    background-color: #EB2900;
+    border-color: #EB2900;
+}
+
+.ui-button-height36 .ui-button{
+  height: 36px !important;
+  min-height: 36px !important;
+}
+
+
+
+.green-splitbutton .ui-button {
+    background-color: #72ae5c;
+    border-color: #72ae5c;
+}
+
+.green-splitbutton .ui-button:hover {
+    background-color: #72ae5c;
+    border-color: #72ae5c;
+}
+
+.btn-bg-border-orrang {
+    background-color: #ff5733 !important;
+    border-color: #ff5733 !important;
+}
+
+.btn-bg-border-green {
+    background-color: #72ae5c !important;
+    border-color: #72ae5c !important;
+}
+
+
+
+
+
+/*  
+**************************
+*  Modifiche sul theme "SAGA" 
+************************
+*/
+
+/*  default font size */
+body .ui-widget {
+  font-size: 1.2rem;
+}
+
+body .ui-button {
+    background: #64b5f6;
+    border-color: #64b5f6;
+    box-shadow: 1px 1px 2px 0px rgba(100, 100, 100, 0.6);
+}
+/*
+body .ui-button.ui-button-text-icon-left .ui-button-text {
+  padding: .2rem 1rem .2rem 1rem
+}
+*/
+
+body .ui-autocomplete .ui-autocomplete-multiple-container .ui-autocomplete-token .ui-autocomplete-token-icon {
+  margin-top: -1.1rem;
+}
+
+body .ui-chkbox .ui-chkbox-box .ui-chkbox-icon {
+  margin-left: -0.5rem;
+  margin-top: -1.1rem;
+}
+
+/*  
+**************************
+*  FINE Modifiche sul theme "SAGA" 
+************************
+*/
+
+.width100 {
+  width: 100% !important;
+}
+
+/* hide switch button in p:dataView with class : hide_switcher */
+.hide_switcher div.ui-dataview-header.ui-widget-header.ui-helper-clearfix.ui-corner-top {
+  display: none !important;
+}
+
+
+.fixedbutton {
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  cursor: pointer;
+  outline: none; /* Remove outline */
+  z-index: 99; /* Make sure it does not overlap */
+  background-color: rgba(0,0,0,0.3) !important;
+  border: 1px solid dimgrey !important;
+  text-transform: none !important;
+}
+
+.pdfbutton {
+  padding: 4px;
+  cursor: pointer;
+  outline: none; /* Remove outline */
+  z-index: 99; /* Make sure it does not overlap */
+  background-color: rgba(0,0,0,0.3) !important;
+  border: 1px solid dimgrey !important;
+  text-transform: none !important;
+}
+
+.pad-t-b-4 {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+.pad-t-b-6 {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+.mt5 {
+  margin-top: 5px !important;
+}
+.mt10 {
+  margin-top: 10px !important;
+}
+.mb10 {
+  margin-bottom:10px !important;
+}
+.mt30 {
+  margin-top: 30px !important;
+}
+
+.ml10 {
+  margin-left: 10px !important;
+}
+
+.mr10 {
+  margin-right: 10px !important;
+}
+
+.mb5 {
+  margin-bottom: 5px !important;
+}
+
+.mb1 {
+  margin-bottom: 1px !important;
+}
+
+.doword-break {
+  word-break: break-word;
+}
+
+.dowrap {
+  white-space: normal !important;
+}
+
+.nowrap {
+  white-space: nowrap !important;
+}
+
+.padlft5 {
+  padding-left: 5px;
+}
+
+.padrgt5 {
+  padding-right: 5px;
+}
+
+.padbtn10 {
+  padding-bottom: 10px !important;
+}
+
+.marbtn10 {
+  margin-bottom: 10px !important;
+}
+
+.txt_small_05 {
+  font-size: 0.5em !important;
+}
+
+.txt_small_06 {
+  font-size: 0.6em !important;
+}
+
+.txt_small_08 {
+  font-size: 0.8em !important;
+}
+
+.txt_small_07 {
+  font-size: 0.75em !important;
+}
+
+.txt_size_09em {
+  font-size: 0.9em !important;
+}
+
+.txt_size_14em {
+  font-size: 1.4em;
+}
+
+.txt_size_18em {
+  font-size: 1.8em;
+}
+
+.cont-Search {
+  margin-bottom: 20px;
+}
+.cont-Search input {
+  width: 100%;
+  padding: 10px 25px 10px 15px;
+  /* height: 48px;*/
+  position: relative;
+}
+
+.bold {
+  font-weight: bold;
+}
+.txtnormal {
+  font-weight: normal;
+}
+
+.txtupp {
+  text-transform: uppercase;
+}
+
+.color-red {
+  color: #BA0600 !important;
+}
+
+.color-blue {
+  color: #006dcc;
+}
+
+.bg-color-yellow {
+  background-color: orangered !important;
+  color: orangered;
+}
+
+.small_fl_lt {
+  font-size: 0.7em;
+  float: left;
+}
+
+.small_fl_rt {
+  font-size: 0.7em;
+  float: right;
+}
+
+ul.pwd_instru{
+  padding-left: 20px !important;
+}
+ul.pwd_instru li {
+  padding: 0px !important;
+  line-height: 15px;
+}
+
+.tab-no-border {
+  border: none !important;
+}
+.customer-login-custom {
+  color: #fff !important;
+}
+.customer-login-custom:hover {
+  color: #00C3DA !important;
+}
+
+
+
+
+
+.btn-filter-bg-cyan {
+  border: 1px solid #1f89ce !important;
+  background: #33ccff !important;
+  font-size: 13px;
+  margin : 0 2px 0 2px !important;
+}
+
+
+
+
+.table tr.ui-state-highlight{
+  color: #006dcc !important;
+}
+
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  /* color: #006dcc; */
+}
+
+
+.order-list table.table tr th.blue {
+  background-color: #01577c;
+}
+
+.order-list table.table tr td table.table tr th.blue2 {
+  background-color: #01618a;
+}
+
+.order-list table.table tr td{
+  padding:5px;
+}
+
+.order-list table.table tr th {
+  padding: 10px;
+}
+
+.blue3 {
+  background-color: #0a3d91 !important;
+}
+
+.blue4 {
+  background-color: #007aaf !important;
+}
+.blue5 {
+  background-color: #008dcb !important;
+}
+
+.admin_color_txt {
+  color:#BA0600 !important;
+}
+
+.jqueryvers-text {
+  font-size: 0.8em;
+  color: #a7a7a7 !important;
+}
+.jqueryvers {
+  color: #a7a7a7 !important;
+}
+
+.jqueryuivers {
+  color: #a7a7a7 !important;
+}
+
+.ui-blockui-content {
+  background-color: #fff !important;
+}
+
+
+
+
+/* blockUI PE */
+
+div.pe-blockui-content {
+
+}
+
+div.pe-blockui-content table.blockuiPE_class {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+div.pe-blockui-content table.blockuiPE_class td {
+  padding: 5px;
+
+}
+
+/* END blockUI PE */
+
+/* datatable data */
+.activeShip {
+  background-color: #d0fbb4;
+  font-weight: bold;
+}
+.dt_filter_header {
+  color: #000;
+}
+
+
+/* DualList Styles */
+
+.headertable{
+  width: 100%;
+  border-collapse:collapse;
+}
+
+.headertable TD{
+  padding: 3px;
+}
+.headertable TR{
+
+}
+
+.headerRow3{
+  background-color: #ceb9b1;
+  font-weight: bold;
+  height: 25px;
+}
+
+
+.headerRow2{
+  background-color: #b2bbc1;
+  font-weight: bold;
+  height: 25px;
+}
+.headerRow{
+  background-color: #d6dadd;
+  font-weight: bold;
+  height: 25px;
+}
+
+.fieldsRow{
+  background-color: #fff;
+}
+
+.atitle{
+  font-weight: bold;
+  font-size: 110%;
+  color: #25729f;
+  margin: 2px;
+}
+
+
+
+
+.pra-dat-filt-sel-many  {
+  min-width: 210px;
+  min-height: 160px;
+  font-size: 9px;
+}
+
+.pra-dat-filt-sel-many div {
+  min-width: 200px;
+  /* min-height: 150px; */
+  /* height: 100px; */
+  font-size: 9px;
+}
+
+
+/* End DualList Styles */
+
+
+table.custom-selectmanycheckbox tr td label {
+  font-size: 0.74em;
+  font-weight: normal;
+  color: inherit;
+}
+
+.custom-selectmanycheckbox-air .ui-chkbox-box.ui-state-active {
+    border-color: #778899 !important;
+    background: #778899 !important;
+}
+
+
+div.custom-selectcheckboxMenu {
+  width: 100% !important;
+}
+
+div.custom-selectcheckboxMenu .ui-selectcheckboxmenu-trigger .ui-icon {
+  /* margin-top: 3px; */
+  left: -10px;
+  top: 5px;
+}
+
+.custom-selectcheckboxMenu span label {
+  font-size: 0.76em;
+  font-weight: normal;
+  color: inherit;
+}
+
+.panel_custom-selectcheckboxMenu {
+  width:250px;
+}
+
+.panel_custom-selectcheckboxMenu div ul li label{
+  font-size: 0.66em;
+  font-weight: normal;
+}
+
+.custmap-btn {
+  border-radius: 3px;
+  display: inline-block;
+  color: #fff;
+  padding: 4px 10px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.custmap-btn:hover {
+  background-color: #015d97;
+  text-decoration: none;
+  color: #fff;
+}
+
+.ui-autocomplete.custom-autocompleteComp {
+  width: 100%;
+}
+.ui-autocomplete.custom-autocompleteComp .ui-autocomplete-multiple-container {
+  width: 100%;
+}
+
+.ui-autocomplete.ui-autocomplete-multiple.custom-autocompleteComp span.ui-autocomplete-token-label {
+  font-size: 0.76em;
+  font-weight: normal;
+  color: #fff;
+}
+.ui-autocomplete.ui-autocomplete-multiple.custom-autocompleteComp li.ui-autocomplete-token.ui-state-active {
+  background-color: #2399e5;
+  padding: 1px;
+  color: #fff;
+}
+
+
+.shipper_icon {
+  background-image: url('../images/shipper_icon.png') !important;
+  background-size: contain; /* Mantieni le proporzioni dell'immagine */
+  width: 24px; /* Regola la larghezza dell'icona */
+  height: 24px; /* Regola l'altezza dell'icona */
+  margin-top: -12px !important;
+}
+
+.consignee_icon {
+  background-image: url('../images/consignee_icon.png') !important;
+  background-size: contain; /* Mantieni le proporzioni dell'immagine */
+  width: 24px; /* Regola la larghezza dell'icona */
+  height: 24px; /* Regola l'altezza dell'icona */
+  margin-top: -12px !important;
+}
+
+.container_icon {
+  background-image: url('../images/container_icon.png') !important;
+  background-size: contain; /* Mantieni le proporzioni dell'immagine */
+  width: 24px; /* Regola la larghezza dell'icona */
+  height: 24px; /* Regola l'altezza dell'icona */
+  margin-top: -12px !important;
+}
+
+.job_icon {
+  background-image: url('../images/job_icon.png') !important;
+  background-size: contain; /* Mantieni le proporzioni dell'immagine */
+  width: 24px; /* Regola la larghezza dell'icona */
+  height: 24px; /* Regola l'altezza dell'icona */
+  margin-top: -12px !important;
+}
+
