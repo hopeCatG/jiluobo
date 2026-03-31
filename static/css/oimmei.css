@@ -13391,7 +13391,6 @@ Topbar
   position: relative;
   z-index: 1;
   transition: all 0.4s ease-in-out;
-  height: 157px;
 }
 #header .header-inner #logo a > img,
 #header #header-wrap #logo a > img {
@@ -13409,6 +13408,8 @@ Topbar
 #header .header-inner #logo a .logo-default,
 #header #header-wrap #logo a .logo-default {
   display: block;
+  width: 100px;
+  height: auto;
 }
 #header .header-inner #logo a,
 #header .header-inner #logo a span,
@@ -13748,8 +13749,8 @@ Main Menu
   font-family: "Barlow", sans-serif;
   padding: 10px 12px;
   text-transform: uppercase;
-  font-size: 0.852em;
-  font-weight: 600;
+  font-size: 1.4em;
+  font-weight: 400;
   letter-spacing: 0.6px;
   color: #000;
   border-radius: 0;
@@ -13774,6 +13775,7 @@ Main Menu
 #mainMenu nav > ul > li:hover > span, #mainMenu nav > ul > li:focus > a,
 #mainMenu nav > ul > li:focus > span {
   color: #002E5F;
+  font-weight: bold;
 }
 #mainMenu nav > ul > li.dropdown:before {
   content: "\e930";

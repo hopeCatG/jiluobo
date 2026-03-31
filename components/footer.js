@@ -13,7 +13,7 @@ if (typeof Vue !== 'undefined') {
                     style="background-image: url('static/images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
                     <div><img src="static/picture/logo-dcs-white.png"
                         style="width: 197px; height: 150px; margin-bottom: 20px;"
-                        alt="Del Corona & Scardigli"></div>
+                        alt="吉萝卜"></div>
                     <p class="company-title">U. DEL CORONA &amp; SCARDIGLI S.r.l.</p>
                     <p class="subtitle">Scali D'Azeglio 32, 57123 Livorno - ITALY</p>
                   </div>

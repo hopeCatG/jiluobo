@@ -24222,7 +24222,7 @@ div.ac-content div.button a.btn {
 }
 
 #header .header-inner #logo {
-  top: 26.5px;
+  top: 56.5px;
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -o-transition: none !important;
@@ -24313,8 +24313,8 @@ div.ac-content div.button a.btn {
   height: 120px;
 }
 #header.header-sticky.sticky-active .header-inner #logo {
-  height: 120px;
-  top: 8px;
+  /* height: 120px;
+  top: 8px; */
 }
 #header.header-sticky.sticky-active .header-inner .header-extras {
   height: 120px;
@@ -24323,11 +24323,11 @@ div.ac-content div.button a.btn {
   height: 120px;
 }
 #header #mainMenu.menu-left nav {
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 @media (min-width: 1200px) {
   #header #mainMenu.menu-left nav {
-    margin-left: 36px;
+    /* margin-left: 36px; */
   }
 }
 @media (max-width: 991px) {
