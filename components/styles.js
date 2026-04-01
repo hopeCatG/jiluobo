@@ -4,7 +4,8 @@ const styles = [
   'static/css/vendor_oi_ux_assets_scss_spacing_scss.css',
   'static/css/frontend.css',
   'static/css/oi-expandable.css',
-  'static/css/frontend-services.css'
+  'static/css/frontend-services.css',
+  'static/css/cover.css'
 ]
 
 styles.forEach(href => {

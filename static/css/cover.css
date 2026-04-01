@@ -1,0 +1,29 @@
+/* 头部样式 */
+#header .header-inner, #header #header-wrap{
+    height: 100px !important;
+}
+#header{
+    height: 100px !important;
+}  
+
+#header .header-inner #logo {
+    top: 29.5px !important;
+}
+
+#header.header-sticky.sticky-active,
+#header{
+    line-height: 99px !important;
+}
+
+nav{
+    height: 100px !important;
+}
+#mainMenu nav > ul > li .dropdown-menu{
+    top:115px !important;
+}
+
+
+/* 底部 */
+#footer a:hover{
+    color: #fff;
+}

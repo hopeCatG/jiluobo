@@ -39,9 +39,7 @@
     <link rel="alternate" hreflang="x-default" href="/">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff"><!-- Stylesheets & Fonts -->
-    <link href="static/css/4e38c0f433ae46c0a6de119e369aa0ce.css" rel="stylesheet">
-    <link href="static/css/5b7e9e7b009044debcd7e0ce053f5040.css" rel="stylesheet">
-    <link href="static/css/b2138a91885043a39d736cb119970ad3.css" rel="stylesheet">
+    
     <link rel="stylesheet"
         href="static/css/vendors-node_modules_fortawesome_fontawesome-free_scss_brands_scss-node_modules_fortawesome_f-c14189.css">
     <link rel="stylesheet"
@@ -74,25 +72,17 @@
             }
         }
     </style>
+    <script src="./components/styles.js"></script>
     <script type="module" src="./components/index.js"></script>
+    <!-- <script type="module" src="./components/styles-dist.js"></script> -->
 
+    
     <script src="static/js/runtime.js"></script>
     <script
         src="static/js/vendors-node_modules_jquery_src_exports_global_js-node_modules_jquery_src_jquery_js.js"></script>
     <script
         src="static/js/vendors-node_modules_oimmei_pololight_node_modules_bootstrap_dist_js_bootstrap_js-node_module-5d45ac.js"></script>
     <script src="static/js/oimmei.js"></script>
-    <script type="text/javascript" src="static/js/router.min.js"></script>
-    <script type="text/javascript" src="static/js/3d5a662a229040dcbde67886acc51e74.js"></script>
-    <script type="text/javascript" src="static/js/translator.min.js"></script>
-    <script type="text/javascript" src="static/js/6546da03a0d64c55b36c273bcccf5b52.js"></script>
-    <script type="text/javascript" src="static/js/0ea9f631baac41cdb407a0462346c2be.js"></script>
-    <script src="static/js/frontend.js"></script>
-    <script type="text/javascript" src="static/js/698d85a5da2a46f29d6efe78fa75f511.js"></script>
-    <script type="text/javascript" src="static/js/9e9a4180ea2b49a78662b934e0060376.js"></script>
-    <script type="text/javascript">
-        var locale = 'en'
-    </script>
     <script
         src="static/js/vendors-node_modules_slick-carousel_slick_slick-theme_scss-node_modules_slick-carousel_slick_-9d3f89.js"></script>
     <script src="static/js/frontend-index.js"></script>
@@ -361,131 +351,9 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="container">
-                    <div
-                        class="row client-logos carousel-description-clients carousel-description-style certification-wrapper">
-                        <div class="col-lg-4">
-                            <div class="description">
-                                <h3 class="cta">质量</h3>
-                                吉萝卜
-                                致力于为客户提供安全优质的服务，这也体现在其获得的认证和针对特定技能的定期更新中，如：管理和流程咨询、信用证验证、危险品咨询、综合物流培训和研讨会。<br><br>
-                                我们的质量政策可通过以下链接的PDF格式获取：
-
-                                <div class="mt-3">
-                                    <div class="document"><a
-                                            href="/document/file/dcspoliticaqualita_en.66793fa57dbfe.pdf"
-                                            target="_blank" class="btn btn-primary">
-                                            DCS - 质量政策
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="carousel dots-grey" data-items="4" data-items-xs="2" data-arrows="false">
-                                <div class="carousel-cell text-center"><img alt="ISO 9001"
-                                        src="static/picture/cqy_9.15_it_cmyk.png"></div>
-                                <div class="carousel-cell text-center"><img alt="Safety and Quality Assessment System"
-                                        src="static/picture/certificazione_sqas.jpg"></div>
-                                <div class="carousel-cell text-center"><img alt="Chemical Distribution Institute"
-                                        src="static/picture/certificazione_cdi.jpg"></div>
-                                <div class="carousel-cell text-center"><img alt="SQF" src="static/picture/sqf_logo.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space"></div>
-                </div>
-            </section>
+            <my-quality></my-quality>
         </div>
-        <footer id="footer">
-            <div class="footer-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <div class="widget">
-                                <div
-                                    style="background-image: url('static/images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
-                                    <div><img src="static/picture/logo-dcs-white.png"
-                                            style="width: 197px; height: 150px; margin-bottom: 20px;"
-                                            alt="吉萝卜"></div>
-                                    <p class="company-title">U. DEL CORONA &amp; SCARDIGLI S.r.l.</p>
-                                    <p class="subtitle">Scali D’Azeglio 32, 57123 Livorno - ITALY</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="row">
-                                <div class="col-md-4 col-footer">
-                                    <div class="widget">
-                                        <div class="widget-title"> DCS 集团</div>
-                                        <ul class="list">
-                                            <li><a href="/about-us" class="about_us-title-class" title="关于我们"
-                                                    aria-label="关于我们" id="menu_13" aria-labelledby="menu_13"> 关于我们</a>
-                                            </li>
-                                            <li><a href="/vertical-markets" class="vertical_market-title-class"
-                                                    title="垂直市场" aria-label="垂直市场" id="menu_14"
-                                                    aria-labelledby="menu_14"> 垂直市场</a></li>
-                                            <li><a href="/governance" class="governance-title-class" title="治理"
-                                                    aria-label="治理" id="menu_15" aria-labelledby="menu_15">
-                                                    治理</a></li>
-                                            <li><a href="/sustainability" class="sustainability-title-class"
-                                                    title="可持续发展" aria-label="可持续发展" id="menu_16"
-                                                    aria-labelledby="menu_16"> 可持续发展</a></li>
-                                            <li><a href="https://mydcs.delcoronascardigli.com/login.xhtml"
-                                                    target="_blank" class="reserved_area-title-class" title="MyDCS"
-                                                    aria-label="MyDCS" id="menu_17" aria-labelledby="menu_17"> MyDCS</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-footer">
-                                    <div class="widget">
-                                        <div class="widget-title"> 服务</div>
-                                        <ul class="list">
-                                            <li><a href="/services/ocean-freight" class="services-by_ocean-title-class"
-                                                    title="海洋货运" aria-label="海洋货运" id="menu_18"
-                                                    aria-labelledby="menu_18"> 海洋货运</a></li>
-                                            <li><a href="/services/land-freight" class="services-by_land-title-class"
-                                                    title="陆路货运" aria-label="陆路货运" id="menu_19"
-                                                    aria-labelledby="menu_19"> 陆路货运</a></li>
-                                            <li><a href="/services/air-freight" class="services-by_air-title-class"
-                                                    title="航空货运" aria-label="航空货运" id="menu_20"
-                                                    aria-labelledby="menu_20"> 航空货运</a></li>
-                                            <li><a href="/services/distribution-logistics"
-                                                    class="services-distribution_logistics-title-class" title="分销物流"
-                                                    aria-label="分销物流" id="menu_21" aria-labelledby="menu_21"> 分销物流</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-footer">
-                                    <div class="widget">
-                                        <div class="widget-title"> 合规</div>
-                                        <ul class="list">
-                                            <li><a href="/code-of-ethics" class="governance-ethical_code-title-class"
-                                                    title="道德准则" aria-label="道德准则" id="menu_22"
-                                                    aria-labelledby="menu_22"> 道德准则</a></li>
-                                            <li><a href="/privacy-policy" class="privacy_policy-title-class"
-                                                    title="隐私政策" aria-label="隐私政策" id="menu_23"
-                                                    aria-labelledby="menu_23"> 隐私政策</a></li>
-                                            <li><a href="/cookies-policy" class="cookie_policy-title-class"
-                                                    title="Cookie政策" aria-label="Cookie政策" id="menu_24"
-                                                    aria-labelledby="menu_24"> Cookie政策</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright-content">
-                <div class="container">
-                    <div class="copyright-text text-center">Free Toll USA and CANADA 800-717-2071 P.I. 01357070497</div>
-                </div>
-            </div>
-        </footer>
+       <my-footer></my-footer>
     </div><!-- Scroll top --><a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
 </body>
 

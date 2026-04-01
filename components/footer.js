@@ -11,10 +11,10 @@ class MyFooter extends HTMLElement {
                   <div
                     style="background-image: url('static/images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
                     <div><img src="static/picture/logo-dcs-white.png"
-                        style="width: 197px; height: 150px; margin-bottom: 20px;"
+                        style="width: 143px; height: auto; margin-bottom: 20px;"
                         alt="Del Corona & Scardigli"></div>
-                    <p class="company-title">U. DEL CORONA &amp; SCARDIGLI S.r.l.</p>
-                    <p class="subtitle">Scali D’Azeglio 32, 57123 Livorno - ITALY</p>
+                    <p class="company-title">© 2025 吉罗卜 All rights reserved.</p>
+                    <p class="subtitle"><a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">沪ICP备2025144635号</a></p>
                   </div>
                 </div>
               </div>
@@ -22,61 +22,54 @@ class MyFooter extends HTMLElement {
                 <div class="row">
                   <div class="col-md-4 col-footer">
                     <div class="widget">
-                      <div class="widget-title"> DCS Group</div>
+                      <div class="widget-title">萝卜吉</div>
                       <ul class="list">
                         <li><a href="/about-us" class="about_us-title-class" title="About Us"
-                            aria-label="About Us" id="menu_13" aria-labelledby="menu_13"> About
-                            Us</a></li>
+                            aria-label="About Us" id="menu_13" aria-labelledby="menu_13">关于我们</a></li>
                         <li><a href="/vertical-markets" class="vertical_market-title-class"
                             title="Vertical Markets" aria-label="Vertical Markets" id="menu_14"
-                            aria-labelledby="menu_14"> Vertical Markets</a></li>
+                            aria-labelledby="menu_14">垂直市场</a></li>
                         <li><a href="/governance" class="governance-title-class" title="Governance"
                             aria-label="Governance" id="menu_15" aria-labelledby="menu_15">
-                            Governance</a></li>
+                            治理</a></li>
                         <li><a href="/sustainability" class="sustainability-title-class"
                             title="Sustainability" aria-label="Sustainability" id="menu_16"
-                            aria-labelledby="menu_16"> Sustainability</a></li>
-                        <li><a href="https://mydcs.delcoronascardigli.com/login.xhtml"
-                            target="_blank" class="reserved_area-title-class" title="MyDCS"
-                            aria-label="MyDCS" id="menu_17" aria-labelledby="menu_17"> MyDCS</a>
-                        </li>
+                            aria-labelledby="menu_16"> 可持续性</a></li>
+                        <li>
                       </ul>
                     </div>
                   </div>
                   <div class="col-md-4 col-footer">
                     <div class="widget">
-                      <div class="widget-title"> Services</div>
+                      <div class="widget-title">服务</div>
                       <ul class="list">
                         <li><a href="/services/ocean-freight" class="services-by_ocean-title-class"
                             title="Ocean Freight" aria-label="Ocean Freight" id="menu_18"
-                            aria-labelledby="menu_18"> Ocean Freight</a></li>
+                            aria-labelledby="menu_18">海运</a></li>
                         <li><a href="/services/land-freight" class="services-by_land-title-class"
                             title="Land Freight" aria-label="Land Freight" id="menu_19"
-                            aria-labelledby="menu_19"> Land Freight</a></li>
+                            aria-labelledby="menu_19"> 陆路货运</a></li>
                         <li><a href="/services/air-freight" class="services-by_air-title-class"
                             title="Air Freight" aria-label="Air Freight" id="menu_20"
-                            aria-labelledby="menu_20"> Air Freight</a></li>
+                            aria-labelledby="menu_20">空运</a></li>
                         <li><a href="/services/distribution-logistics"
                             class="services-distribution_logistics-title-class"
                             title="Distribution Logistics" aria-label="Distribution Logistics"
-                            id="menu_21" aria-labelledby="menu_21"> Distribution Logistics</a>
+                            id="menu_21" aria-labelledby="menu_21">配送物流</a>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div class="col-md-4 col-footer">
                     <div class="widget">
-                      <div class="widget-title"> Compliance</div>
+                      <div class="widget-title">遵守</div>
                       <ul class="list">
                         <li><a href="/code-of-ethics" class="governance-ethical_code-title-class"
                             title="Code of Ethics" aria-label="Code of Ethics" id="menu_22"
-                            aria-labelledby="menu_22"> Code of Ethics</a></li>
+                            aria-labelledby="menu_22">道德准则</a></li>
                         <li><a href="/privacy-policy" class="privacy_policy-title-class"
                             title="Privacy Policy" aria-label="Privacy Policy" id="menu_23"
-                            aria-labelledby="menu_23"> Privacy Policy</a></li>
-                        <li><a href="/cookies-policy" class="cookie_policy-title-class"
-                            title="Cookie Policy" aria-label="Cookie Policy" id="menu_24"
-                            aria-labelledby="menu_24"> Cookie Policy</a></li>
+                            aria-labelledby="menu_23">隐私政策</a></li>
                       </ul>
                     </div>
                   </div>
@@ -87,7 +80,7 @@ class MyFooter extends HTMLElement {
         </div>
         <div class="copyright-content">
           <div class="container">
-            <div class="copyright-text text-center">Free Toll USA and CANADA 800-717-2071 P.I. 01357070497</div>
+            <div class="copyright-text text-center">24小时热线电话 139-8888-8888</div>
           </div>
         </div>
       </footer>
