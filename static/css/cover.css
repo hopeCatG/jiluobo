@@ -27,3 +27,9 @@ nav{
 #footer a:hover{
     color: #fff;
 }
+
+
+.service-copyright-text{
+    color: #EBA26A !important;
+    font-size: 12px !important;
+}

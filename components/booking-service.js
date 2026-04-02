@@ -5,6 +5,7 @@ class MyBookingService extends HTMLElement {
             <section>
             <div class="container">
                 <h3 class="text-center">全球订舱服务</h3>
+                <h3 class="service-copyright-text text-center">服务热线 400-662-6939</h3>
                 <div class="row gy-5 mt-60">
                     <div class="col-lg-4">
                         <div class="icon-box medium fancy">

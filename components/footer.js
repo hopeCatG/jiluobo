@@ -80,7 +80,7 @@ class MyFooter extends HTMLElement {
         </div>
         <div class="copyright-content">
           <div class="container">
-            <div class="copyright-text text-center">24小时热线电话 139-8888-8888</div>
+            <div class="copyright-text text-center">24小时热线电话 400-662-6939</div>
           </div>
         </div>
       </footer>
