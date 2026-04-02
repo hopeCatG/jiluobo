@@ -1,0 +1,138 @@
+$(document).ready(function() {
+    // 渲染导航 Tabs
+    function renderNavTabs() {
+        var html = '';
+        continentsData.forEach(function(continent) {
+            html += '<li class="nav-item">' +
+                '<a class="nav-link" id="' + continent.code + '-tab" data-bs-toggle="tab" data-scroll="tabs" ' +
+                'href="#' + continent.code + '-tabcontent" data-filter="continent" data-value="' + continent.code + '" role="tab" ' +
+                'aria-controls="' + continent.code + '-tabcontent" aria-selected="false">' +
+                continent.name +
+                '</a></li>';
+        });
+        $('#continent-tabs').html(html);
+    }
+
+    // 渲染左侧手风琴菜单
+    function renderAccordion() {
+        var html = '';
+        continentsData.forEach(function(continent) {
+            var countries = continent.countriesData || [];
+            html += '<div class="ac-item">' +
+                '<h5 class="ac-title" data-filter="continent" data-value="' + continent.code + '">' + continent.name + '</h5>' +
+                '<div class="ac-content">' +
+                '<div class="row">';
+            
+            countries.forEach(function(country) {
+                html += '<div class="col-12 country-row" data-filter="country" data-value="' + country.code + '">' +
+                    '<img class="flag-img me-2" alt="' + country.nameEn + '" src="static/picture/' + country.flag + '"> ' +
+                    country.name +
+                    '<small class="number-office"><span class="offices">' + country.offices + ' </span></small>' +
+                    '</div>';
+            });
+            
+            html += '</div></div></div>';
+        });
+        $('#continent-accordion-left').html(html);
+    }
+
+    // 渲染tab 列表
+    function renderTabContent() {
+        var html = '';
+        continentsData.forEach(function(continent) {
+            var countries = continent.countriesData || [];
+            html += '<div class="tab-pane accordion-item continent-wrapper" id="' + continent.code + '-tabcontent" role="tabpanel" ' +
+                'aria-labelledby="' + continent.code + '-tab" tabindex="-1" data-continent="' + continent.code + '">' +
+                '<h3 class="h2 accordion-header d-md-none" id="' + continent.code + '-header">' +
+                '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" ' +
+                'data-bs-target="#' + continent.code + '-collapse" aria-expanded="false" aria-controls="' + continent.code + '-collapse">' +
+                continent.name +
+                '</button></h3>' +
+                '<div id="' + continent.code + '-collapse" class="accordion-collapse collapse d-lg-block" aria-labelledby="' + continent.code + '-header">' +
+                '<div class="accordion-body">' +
+                '<div class="container-lg">';
+            
+            countries.forEach(function(country) {
+                var countryOffices = offices.filter(function(office) {
+                    return office.country === country.code;
+                });
+                
+                html += '<div class="row country-wrapper">' +
+                    '<div class="col-12">' +
+                    '<h4 class="country-name"><img class="flag-img me-2" alt="' + country.nameEn + '" ' +
+                    'src="static/picture/' + country.flag + '"> ' +
+                    country.name +
+                    '<span class="number-office"> 新闻数 <span class="offices">' + country.offices + ' </span></span>' +
+                    '</h4></div>';
+                
+                countryOffices.forEach(function(office) {
+                    var officeDataAttr = JSON.stringify({
+                        id: office.id,
+                        latLng: office.latLng,
+                        name: office.name,
+                        address: office.address.replace(/<br>/g, ' '),
+                        continent: office.continent,
+                        country: office.country,
+                        countryName: country.nameEn,
+                        city: office.city,
+                        slug: office.slug,
+                        lng: office.lng,
+                        lat: office.lat
+                    }).replace(/"/g, '&quot;');
+                    
+                    html += '<div class="col-12 col-lg-6 d-flex flex-column">' +
+                        '<div class="card office-card flex-fill">' +
+                        '<div id="office-card-' + office.id + '" class="card-body office-card-body office-on-map" ' +
+                        'data-office="' + officeDataAttr + '">' +
+                        '<div class="office-card-image-wrapper" style="background-image: url(' + office.image + ')"></div>' +
+                        '<div class="office-card-info">' +
+                        '<div class="office-city">' + office.city + '</div>' +
+                        '<div class="office-name"><b>' + office.name + '</b></div>' +
+                        '<div class="office-contact">' +
+                        '<img src="static/picture/phone_icon.svg" alt="' + office.phone + ': ' + office.phoneLink + '">' +
+                        '<a href="tel:' + office.phoneLink + '">' + office.phone + '</a></div>' +
+                        '<div class="office-address">' +
+                        '<img src="static/picture/marker_icon.svg" alt="' + office.address.replace(/<br>/g, ' ') + '">' +
+                        '<span>' + office.address + '</span></div>' +
+                        '<div class="office-btn"><a class="btn btn-primary" href="/offices/' + office.slug + '">Show</a></div>' +
+                        '</div></div></div></div>';
+                });
+                
+                html += '</div>';
+            });
+            
+            html += '</div></div></div></div>';
+        });
+        $('#continent-accordion').html(html);
+    }
+
+    // 渲染地图覆盖层办公室卡片
+    function renderMapOverlay() {
+        var html = '';
+        offices.forEach(function(office) {
+            html += '<div class="col-12" data-show="no-country" data-value="' + office.country + '" data-office-id="' + office.id + '">' +
+                '<div id="office-card-overlay-' + office.id + '" class="office-on-map">' +
+                '<div class="office-card-image-box" style="background-image: url(' + office.image + ')"></div>' +
+                '<div class="office-city">' + office.city + '</div>' +
+                '<div class="office-card-info mv-10">' +
+                '<div class="office-name">' + office.name + '</div>' +
+                '<div class="office-contact">' +
+                '<img src="static/picture/phone_icon.svg" alt="' + office.phone + ': ' + office.phoneLink + '">' +
+                '<a href="tel:' + office.phoneLink + '">' + office.phone + '</a></div>' +
+                '<div class="office-address">' +
+                '<img src="static/picture/marker_icon.svg" alt="' + office.address.replace(/<br>/g, ' ') + '">' +
+                '<span>' + office.address + '</span></div>' +
+                '<div class="office-btn"><button class="btn btn-primary btn-office" data-office-id="' + office.id + '" ' +
+                'data-href="/offices/' + office.slug + '">Show</button></div>' +
+                '</div></div></div>';
+        });
+        $('#map-offices').html(html);
+        console.log('66',$('#map-offices'));
+    }
+
+    // 初始化渲染
+    renderNavTabs();
+    renderAccordion();
+    renderTabContent();
+    renderMapOverlay();
+});

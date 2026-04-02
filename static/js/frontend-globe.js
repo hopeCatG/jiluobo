@@ -792,7 +792,7 @@ $(document).ready(function () {
      * OC: Oceania
      * SA: Sud America
      */
-    let startingContinent = 'EU';
+    let startingContinent = 'AS';
     const continentByCountryCode = {
       AF: 'AS',
       AL: 'EU',
@@ -1069,7 +1069,7 @@ $(document).ready(function () {
           }
         }
       }
-      startingContinent = 'EU';
+      startingContinent = 'AS';
     }
 
     // Selecting the first tab/accordion.
