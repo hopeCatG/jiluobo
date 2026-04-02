@@ -143,7 +143,7 @@ $(document).ready(function () {
       // new mapboxgl.Marker(el)
       //     .setLngLat(office.latLng.coordinates)
       //     .addTo(map);
-
+      console.log('office', office);
       geojsonOffice.features.push({
         type: 'Feature',
         geometry: {
@@ -776,7 +776,7 @@ $(document).ready(function () {
             scrollTime = 0;
             spinGlobe();
           });
-        }
+        } 
       }
     });
     spinGlobe();
