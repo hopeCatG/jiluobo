@@ -45,13 +45,11 @@ __webpack_require__(/*! ./index.scss */ "./assets/vendor/oi-expandable/index.scs
       if (!touch) {
         // Adding the proper class on interaction.
         $item.on('mouseover', function () {
-          console.log('mouseover');
           expand($item, false);
           // Doing nothing in responsive mode.
         });
 
         $item.on('click', function (e) {
-          console.log('click');
           if ($item.parent().css('flex-direction') === 'row' && !$item.hasClass('expanded')) {
             expand($item, true);
             e.preventDefault();
@@ -60,7 +58,6 @@ __webpack_require__(/*! ./index.scss */ "./assets/vendor/oi-expandable/index.scs
         });
       }
       function expand($item, checkClick) {
-        console.log('expand');
         if ($item.parent().css('flex-direction') === 'row') {
           if (!$item.hasClass('expanded') && (checkClick || !$item.hasClass('shrunk'))) {
             // All items in the same row must be shrunk.
@@ -91,7 +88,6 @@ __webpack_require__(/*! ./index.scss */ "./assets/vendor/oi-expandable/index.scs
 
 // When the document loads, initializing every existing expandable.
 $(document).ready(function () {
-  console.log('oi-expandable');
   $('.oi-expandable-wrapper').oiExpandable();
 });
 

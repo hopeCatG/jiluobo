@@ -10,7 +10,7 @@ class MyFooter extends HTMLElement {
                 <div class="widget">
                   <div
                     style="background-image: url('static/images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
-                    <div><img src="static/picture/logo-dcs-white.png"
+                    <div><img src="/static/picture/logo-dcs-white.png"
                         style="width: 143px; height: auto; margin-bottom: 20px;"
                         alt="Del Corona & Scardigli"></div>
                     <p class="company-title">© 2025 吉罗卜 All rights reserved.</p>

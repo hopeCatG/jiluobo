@@ -11,3 +11,9 @@ import './footer.js'
 
 // 引入样式
 import './styles.js'
+
+import './quality.js'
+
+import './contact-us.js'
+
+import './booking-service.js'

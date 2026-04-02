@@ -25,11 +25,11 @@ class MyQuality extends HTMLElement {
                         <div class="col-lg-8">
                             <div class="carousel dots-grey" data-items="4" data-items-xs="2" data-arrows="false">
                                 <div class="carousel-cell text-center"><img alt="ISO 9001"
-                                        src="static/picture/cqy_9.15_it_cmyk.png"></div>
+                                        src="/static/picture/cqy_9.15_it_cmyk.png"></div>
                                 <div class="carousel-cell text-center"><img alt="Safety and Quality Assessment System"
-                                        src="static/picture/certificazione_sqas.jpg"></div>
+                                        src="/static/picture/certificazione_sqas.jpg"></div>
                                 <div class="carousel-cell text-center"><img alt="Chemical Distribution Institute"
-                                        src="static/picture/certificazione_cdi.jpg"></div>
+                                        src="/static/picture/certificazione_cdi.jpg"></div>
                                 <div class="carousel-cell text-center"><img alt="SQF" src="static/picture/sqf_logo.png">
                                 </div>
                             </div>
