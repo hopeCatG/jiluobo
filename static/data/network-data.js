@@ -1,257 +1,211 @@
+$(function () {
+    initMapData();
+});
 // 大洲数据
-const continentsData = [
-    {
-        code: 'AS', name: '亚洲', countriesData: [
-            { code: 'CN', name: '中国', nameEn: 'China', flag: 'cn.svg', offices: 1 },
-            { code: 'IN', name: '印度', nameEn: 'India', flag: 'in.svg', offices: 1 },
-            { code: 'KR', name: '韩国', nameEn: 'South Korea', flag: 'kr.svg', offices: 1 }
-        ]
-    },
-    {
-        code: 'EU', name: '欧洲', countriesData: [
-            { code: 'IT', name: '意大利', nameEn: 'Italy', flag: 'it.svg', offices: 1 },
-            { code: 'PL', name: '波兰', nameEn: 'Poland', flag: 'pl.svg', offices: 1 },
-            { code: 'RU', name: '俄罗斯', nameEn: 'Russia', flag: 'ru.svg', offices: 1 },
-            { code: 'SI', name: '斯洛文尼亚', nameEn: 'Slovenia', flag: 'si.svg', offices: 1 },
-            { code: 'ES', name: '西班牙', nameEn: 'Spain', flag: 'es.svg', offices: 1 },
-            { code: 'GB', name: '英国', nameEn: 'United Kingdom', flag: 'gb.svg', offices: 1 }
-        ]
-    },
-    {
-        code: 'NA', name: '北美洲', countriesData: [
-            { code: 'CA', name: '加拿大', nameEn: 'Canada', flag: 'ca.svg', offices: 1 },
-            { code: 'MX', name: '墨西哥', nameEn: 'Mexico', flag: 'mx.svg', offices: 1 },
-            { code: 'US', name: '美国', nameEn: 'United States', flag: 'us.svg', offices: 1 }
-        ]
-    },
-    {
-        code: 'SA', name: '南美洲', countriesData: [
-            { code: 'BR', name: '巴西', nameEn: 'Brazil', flag: 'br.svg', offices: 1 },
-            { code: 'CL', name: '智利', nameEn: 'Chile', flag: 'cl.svg', offices: 1 }
-        ]
-    },
+let continentsData = [
 
-    {
-        code: 'OC', name: '大洋洲', countriesData: [
-            { code: 'AU', name: '澳大利亚', nameEn: 'Australia', flag: 'au.svg', offices: 1 }
-        ]
-    }
 ];
 
-// 办公室数据
+
 const offices = [
     {
-        id: 260,
-        name: "上海西雅国际食品和饮料展览会",
+        id: 1,
+        name: "上海西雅国际食品和饮料展览会6",
         city: "上海",
-        address: "269 Haining Road<br>Shanghai 200080, China Direct line: 86 - 21 - 65212616",
-        phone: "+86 21 6522 2266",
-        phoneLink: "+862165222266",
+        // address: "269 Haining Road<br>Shanghai 200080, China Direct line: 86 - 21 - 65212616",
+        // phone: "+86 21 6522 2266",
+        // phoneLink: "+862165222266",
         image: "static/images/dcs-sede-shanghai-39.jpg",
-        slug: "shanghai",
+        // slug: "shanghai",
         country: "CN",
         continent: "AS",
         latLng: { type: "Point", coordinates: [121.48030856831, 31.247523564039] },
         lng: "105.0000000000",
         lat: "35.0000000000"
     },
-    {
-        id: 222,
-        name: "Shanghaiaaa啊啊出来吧",
-        city: "Livorno",
-        address: "Scali D'Azeglio 32<br>57123 Livorno",
-        phone: "+39 0586 27333",
-        phoneLink: "+39058627333",
-        image: "static/images/dcs-sede-livorno-1.jpg",
-        slug: "livorno",
-        country: "IT",
-        continent: "EU",
-        latLng: { type: "Point", coordinates: [10.308116097541, 43.547929167624] },
-        lng: "12.8333300000",
-        lat: "42.8333300000"
-    },
-    {
-        id: 274,
-        name: "DCS Tramaco Sp.z.o.o.",
-        city: "Łódź",
-        address: "Grabińska 32<br>92-780 Łódź",
-        phone: "+48 79 0292434",
-        phoneLink: "+48790292434",
-        image: "static/images/dcs_sede-lodz.jpg",
-        slug: "lodz",
-        country: "PL",
-        continent: "EU",
-        latLng: { type: "Point", coordinates: [19.591219422342, 51.810934667328] },
-        lng: "20.0000000000",
-        lat: "52.0000000000"
-    },
-    {
-        id: 255,
-        name: "Del Corona & Scardigli Russia",
-        city: "Moscow",
-        address: "Уланский переулок 22/1 офис 534 Ulanskiy pereulok 22/1<br>101000 - Moscow",
-        phone: "+7 499 350 5562",
-        phoneLink: "+74993505562",
-        image: "static/images/dcs-sede-moscow-34.jpg",
-        slug: "moscow",
-        country: "RU",
-        continent: "EU",
-        latLng: { type: "Point", coordinates: [37.640728569197, 55.769232796668] },
-        lng: "100.0000000000",
-        lat: "60.0000000000"
-    },
-    {
-        id: 231,
-        name: "TRAMACO Logistika d.o.o.",
-        city: "Koper",
-        address: "Vojkovo nabrežje 30/A<br>SI-6000 Koper",
-        phone: "+386 5611 7615",
-        phoneLink: "+38656117615",
-        image: "static/images/dcs-sede-koper-10.jpg",
-        slug: "koper",
-        country: "SI",
-        continent: "EU",
-        latLng: { type: "Point", coordinates: [13.73733199577, 45.547385670955] },
-        lng: "15.0000000000",
-        lat: "46.0833300000"
-    },
-    {
-        id: 268,
-        name: "Del Corona & Scardigli Spain SLU",
-        city: "Barcelona",
-        address: "Carrer d'Almogavers 119-123<br>08018 Barcelona",
-        phone: "+34 932 697 000",
-        phoneLink: "+34932697000",
-        image: "static/images/barcellona.jpg",
-        slug: "barcellona",
-        country: "ES",
-        continent: "EU",
-        latLng: { type: "Point", coordinates: [2.1898382686289, 41.397334178592] },
-        lng: "-4.0000000000",
-        lat: "40.0000000000"
-    },
-    {
-        id: 234,
-        name: "Del Corona & Scardigli Canada Inc.",
-        city: "Toronto",
-        address: "8200 Jane Street<br>Ontario - L4K 5A7",
-        phone: "+1 855 421 3105",
-        phoneLink: "+1 855 421 3105",
-        image: "static/images/dcs-sede-toronto-13.jpg",
-        slug: "toronto",
-        country: "CA",
-        continent: "NA",
-        latLng: { type: "Point", coordinates: [-79.527872173615, 43.806817664413] },
-        lng: "-113.6425800000",
-        lat: "60.1086700000"
-    },
-    {
-        id: 246,
-        name: "Del Corona & Scardigli Mexico S.A. de C.V.",
-        city: "Mexico City",
-        address: "Patricio Sanz 1609, Col del Valle Sur<br>Benito Juárez 03104 Ciudad de México",
-        phone: "+52 55 55598402",
-        phoneLink: "+525555598402",
-        image: "static/images/dcs-sede-mexicocity-25.jpg",
-        slug: "mexico-city",
-        country: "MX",
-        continent: "NA",
-        latLng: { type: "Point", coordinates: [-99.175210003122, 19.372218239004] },
-        lng: "-102.0000000000",
-        lat: "23.0000000000"
-    },
-    {
-        id: 236,
-        name: "Del Corona & Scardigli™ USA Inc.",
-        city: "New York",
-        address: "15 W 36th Street<br>New York, NY 10018",
-        phone: "+1 646 661 4804",
-        phoneLink: "+1 646 661 4804",
-        image: "static/images/dcs-sede-newyork-15.jpg",
-        slug: "new-york",
-        country: "US",
-        continent: "NA",
-        latLng: { type: "Point", coordinates: [-73.984625202559, 40.750321860272] },
-        lng: "-98.5000000000",
-        lat: "39.7600000000"
-    },
-    {
-        id: 250,
-        name: "Del Corona & Scardigli logistica LTDA",
-        city: "San Paolo",
-        address: "Rua Fradique Coutinho 212, San Paolo - San Paolo, 05416-000, Brasile<br>Salas 43 e 44 Pinheiros, 05416-000",
-        phone: "+55 11 3254 6292",
-        phoneLink: "+551132546292",
-        image: "static/images/dcs-sede-sanpaolo-29.jpg",
-        slug: "san-paolo",
-        country: "BR",
-        continent: "SA",
-        latLng: { type: "Point", coordinates: [-46.685269, -23.564507] },
-        lng: "-55.0000000000",
-        lat: "-10.0000000000"
-    },
-    {
-        id: 249,
-        name: "Del Corona & Scardigli Chile LTDA.",
-        city: "Santiago",
-        address: "Roger de Flor 2871<br>Las Condes, Santiago",
-        phone: "+56952125913",
-        phoneLink: "+56952125913",
-        image: "static/images/dcs-sede-santiago-28.jpg",
-        slug: "santiago",
-        country: "CL",
-        continent: "SA",
-        latLng: { type: "Point", coordinates: [-70.600060302792, -33.416827738928] },
-        lng: "-71.0000000000",
-        lat: "-30.0000000000"
-    },
-
-    {
-        id: 256,
-        name: "Del Corona & Scardigli India PVT. LTD.",
-        city: "Chennai",
-        address: "Krishnasamy Street, 600061, Pazhavanthangal, Chennai, Chennai, Tamil Nadu, India<br>",
-        phone: "+91 44 45561822",
-        phoneLink: "+914445561822",
-        image: "static/images/dcs-sede-chennai-35.jpg",
-        slug: "chennai",
-        country: "IN",
-        continent: "AS",
-        latLng: { type: "Point", coordinates: [80.185544, 12.987401] },
-        lng: "79.0000000000",
-        lat: "22.0000000000"
-    },
-    {
-        id: 265,
-        name: "Del Corona & Scardigli Korea",
-        city: "Seoul",
-        address: "157 양평로 Yeongdeungpo-ro<br>Yeongdeungpo-gu Seoul",
-        phone: "+82 2 6338 0155",
-        phoneLink: "+82263380155",
-        image: "static/images/dcs-sede-seoul-44.jpg",
-        slug: "seoul",
-        country: "KR",
-        continent: "AS",
-        latLng: { type: "Point", coordinates: [126.890302, 37.539304] },
-        lng: "127.7500000000",
-        lat: "36.5000000000"
-    },
-    {
-        id: 279,
-        name: "Del Corona & Scardigli Australia Pty Ltd",
-        city: "Sydney",
-        address: "152 Bunnerong Road<br>Eastgardens 2036",
-        phone: "+61 3 8609 4003",
-        phoneLink: "+61386094003",
-        image: "static/images/dcs_sede-sydney.jpg",
-        slug: "sydney",
-        country: "AU",
-        continent: "OC",
-        latLng: { type: "Point", coordinates: [151.224011, -33.944595] },
-        lng: "135.0000000000",
-        lat: "-25.0000000000"
-    }
 ];
+// -------------------- 渲染函数 --------------------
+
+// 渲染导航 Tabs
+function renderNavTabs() {
+    var html = '';
+    continentsData.forEach(function (continent) {
+        html += '<li class="nav-item">' +
+            '<a class="nav-link" id="' + continent.code + '-tab" data-bs-toggle="tab" data-scroll="tabs" ' +
+            'href="#' + continent.code + '-tabcontent" data-filter="continent" data-value="' + continent.code + '" role="tab" ' +
+            'aria-controls="' + continent.code + '-tabcontent" aria-selected="false">' +
+            continent.name +
+            '</a></li>';
+    });
+    $('#continent-tabs').html(html);
+}
+
+// 渲染左侧手风琴菜单
+function renderAccordion() {
+    var html = '';
+    continentsData.forEach(function (continent) {
+        var countries = continent.countriesData || [];
+        html += '<div class="ac-item">' +
+            '<h5 class="ac-title" data-filter="continent" data-value="' + continent.code + '">' + continent.name + '</h5>' +
+            '<div class="ac-content">' +
+            '<div class="row">';
+
+        countries.forEach(function (country) {
+            html += '<div class="col-12 country-row" data-filter="country" data-value="' + country.code + '">' +
+                '<img class="flag-img me-2" alt="' + country.name_en + '" src="' + country.flag + '"> ' +
+                country.name +
+                '<small class="number-office"><span class="offices">' + country.offices + ' </span></small>' +
+                '</div>';
+        });
+
+        html += '</div></div></div>';
+    });
+    $('#continent-accordion-left').html(html);
+}
+
+// 渲染 tab 内容
+function renderTabContent() {
+    var html = '';
+    continentsData.forEach(function (continent) {
+        var countries = continent.countriesData || [];
+        html += '<div class="tab-pane accordion-item continent-wrapper" id="' + continent.code + '-tabcontent" role="tabpanel" ' +
+            'aria-labelledby="' + continent.code + '-tab" tabindex="-1" data-continent="' + continent.code + '">' +
+            '<h3 class="h2 accordion-header d-md-none" id="' + continent.code + '-header">' +
+            '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" ' +
+            'data-bs-target="#' + continent.code + '-collapse" aria-expanded="false" aria-controls="' + continent.code + '-collapse">' +
+            continent.name +
+            '</button></h3>' +
+            '<div id="' + continent.code + '-collapse" class="accordion-collapse collapse d-lg-block" aria-labelledby="' + continent.code + '-header">' +
+            '<div class="accordion-body">' +
+            '<div class="container-lg">';
+
+        countries.forEach(function (country) {
+            var countryOffices = offices.filter(function (office) {
+                return office.country === country.code;
+            });
+
+            html += '<div class="row country-wrapper">' +
+                '<div class="col-12">' +
+                '<h4 class="country-name"><img class="flag-img me-2" alt="' + country.name_en + '" ' +
+                'src="' + country.flag + '"> ' +
+                country.name +
+                '<span class="number-office"> 新闻数 <span class="offices">' + country.offices + ' </span></span>' +
+                '</h4></div>';
+
+            countryOffices.forEach(function (office) {
+                var officeDataAttr = JSON.stringify({
+                    id: office.id,
+                    latLng: office.latLng,
+                    name: office.name,
+                    continent: office.continent,
+                    country: office.country,
+                    countryName: country.name_en,
+                    city: office.city,
+                    slug: office.slug,
+                    lng: office.lng,
+                    lat: office.lat
+                }).replace(/"/g, '&quot;');
+
+                html += '<div class="col-12 col-lg-6 d-flex flex-column">' +
+                    '<div class="card office-card flex-fill">' +
+                    '<div id="office-card-' + office.id + '" class="card-body office-card-body office-on-map" ' +
+                    'data-office="' + officeDataAttr + '">' +
+                    '<div class="office-card-image-wrapper" style="background-image: url(' + office.image + ')"></div>' +
+                    '<div class="office-card-info">' +
+                    '<div class="office-city">' + office.city + '</div>' +
+                    '<div class="office-name"><b>' + office.name + '</b></div>' +
+                    '<div class="office-contact">' +
+                    '<img src="static/picture/news-admin.svg" alt="">' +
+                    '<span >' + '发布者：上海吉罗卜供应链' + '</span></div>' +
+                    '<div class="office-address">' +
+                    '<img src="static/picture/news-time.svg" alt="">' +
+                    '<span>' + '时间：2026-04-03 10:00:00' + '</span></div>' +
+                    '<div class="office-btn"><a class="btn btn-primary" href="/look-news?id=' + office.id + '">阅读</a></div>' +
+                    '</div></div></div></div>';
+            });
+
+            html += '</div>';
+        });
+
+        html += '</div></div></div></div>';
+    });
+    $('#continent-accordion').html(html);
+}
+
+// 渲染地图覆盖层
+function renderMapOverlay() {
+    var html = '';
+    offices.forEach(function (office) {
+        html += '<div class="col-12" data-show="no-country" data-value="' + office.country + '" data-office-id="' + office.id + '">' +
+            '<div id="office-card-overlay-' + office.id + '" class="office-on-map">' +
+            '<div class="office-card-image-box" style="background-image: url(' + office.image + ')"></div>' +
+            '<div class="office-city">' + office.city + '</div>' +
+            '<div class="office-card-info mv-10">' +
+            '<div class="office-name">' + office.name + '</div>' +
+            '<div class="office-contact">' +
+            '<img src="static/picture/news-admin.svg" alt="">' +
+            '<span >' + '发布者：上海吉罗卜供应链' + '</span></div>' +
+            '<div class="office-address">' +
+            '<img src="static/picture/news-time.svg" alt="">' +
+            '<span>' + '时间：2026-04-03 10:00:00' + '</span></div>' +
+            '<div class="office-btn"><button class="btn btn-primary btn-office" data-office-id="' + office.id + '" ' +
+            'data-href="/look-news?id=' + office.id + '">阅读</button></div>' +
+            '</div></div></div>';
+    });
+    $('#map-offices').html(html);
+}
+
+// -------------------- 初始化 --------------------
+async function initMapData() {
+    try {
+        const { data } = await API.getContinentsData();
+        continentsData = data;
+
+        renderNavTabs();
+        renderAccordion();
+        renderTabContent();
+        renderMapOverlay();
+
+        await loadScript('static/js/frontend-globe.js');
+        await loadScript('static/js/oimmei.js');
+
+        // -------------------- 事件委托 --------------------
+        $(document).on('click', '.ac-title', function (e) {
+            e.stopPropagation(); // 阻止事件冒泡，安全
+
+            const $acItem = $(this).parent('.ac-item');
+            const $currentContent = $acItem.children('.ac-content');
+
+            // 隐藏其他 ac-content 并移除 ac-active 类
+            $('.ac-item').not($acItem).children('.ac-content').hide().end().removeClass('ac-active');
+
+            // 切换当前内容显示/隐藏
+            $currentContent.toggle();
+
+            // 根据显示状态切换 ac-active 类
+            if ($currentContent.is(':visible')) {
+                $acItem.addClass('ac-active');
+            } else {
+                $acItem.removeClass('ac-active');
+            }
+        });
+
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+// 动态加载 JS 文件
+function loadScript(src) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.async = true;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error(`加载脚本失败: ${src}`));
+        document.body.appendChild(script);
+    });
+}
 
 // 首先显示的位置
 var centerOffice = offices[0];

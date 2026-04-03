@@ -25,7 +25,7 @@ $(document).ready(function () {
 
             countries.forEach(function (country) {
                 html += '<div class="col-12 country-row" data-filter="country" data-value="' + country.code + '">' +
-                    '<img class="flag-img me-2" alt="' + country.nameEn + '" src="static/picture/' + country.flag + '"> ' +
+                    '<img class="flag-img me-2" alt="' + country.name_en + '" src="static/picture/' + country.flag + '"> ' +
                     country.name +
                     '<small class="number-office"><span class="offices">' + country.offices + ' </span></small>' +
                     '</div>';
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
                 html += '<div class="row country-wrapper">' +
                     '<div class="col-12">' +
-                    '<h4 class="country-name"><img class="flag-img me-2" alt="' + country.nameEn + '" ' +
+                    '<h4 class="country-name"><img class="flag-img me-2" alt="' + country.name_en + '" ' +
                     'src="static/picture/' + country.flag + '"> ' +
                     country.name +
                     '<span class="number-office"> 新闻数 <span class="offices">' + country.offices + ' </span></span>' +
@@ -73,7 +73,7 @@ $(document).ready(function () {
                         address: office.address.replace(/<br>/g, ' '),
                         continent: office.continent,
                         country: office.country,
-                        countryName: country.nameEn,
+                        countryName: country.name_en,
                         city: office.city,
                         slug: office.slug,
                         lng: office.lng,
