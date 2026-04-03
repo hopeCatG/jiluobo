@@ -1,8 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // 渲染导航 Tabs
     function renderNavTabs() {
         var html = '';
-        continentsData.forEach(function(continent) {
+        continentsData.forEach(function (continent) {
             html += '<li class="nav-item">' +
                 '<a class="nav-link" id="' + continent.code + '-tab" data-bs-toggle="tab" data-scroll="tabs" ' +
                 'href="#' + continent.code + '-tabcontent" data-filter="continent" data-value="' + continent.code + '" role="tab" ' +
@@ -16,21 +16,21 @@ $(document).ready(function() {
     // 渲染左侧手风琴菜单
     function renderAccordion() {
         var html = '';
-        continentsData.forEach(function(continent) {
+        continentsData.forEach(function (continent) {
             var countries = continent.countriesData || [];
             html += '<div class="ac-item">' +
                 '<h5 class="ac-title" data-filter="continent" data-value="' + continent.code + '">' + continent.name + '</h5>' +
                 '<div class="ac-content">' +
                 '<div class="row">';
-            
-            countries.forEach(function(country) {
+
+            countries.forEach(function (country) {
                 html += '<div class="col-12 country-row" data-filter="country" data-value="' + country.code + '">' +
                     '<img class="flag-img me-2" alt="' + country.nameEn + '" src="static/picture/' + country.flag + '"> ' +
                     country.name +
                     '<small class="number-office"><span class="offices">' + country.offices + ' </span></small>' +
                     '</div>';
             });
-            
+
             html += '</div></div></div>';
         });
         $('#continent-accordion-left').html(html);
@@ -39,7 +39,7 @@ $(document).ready(function() {
     // 渲染tab 列表
     function renderTabContent() {
         var html = '';
-        continentsData.forEach(function(continent) {
+        continentsData.forEach(function (continent) {
             var countries = continent.countriesData || [];
             html += '<div class="tab-pane accordion-item continent-wrapper" id="' + continent.code + '-tabcontent" role="tabpanel" ' +
                 'aria-labelledby="' + continent.code + '-tab" tabindex="-1" data-continent="' + continent.code + '">' +
@@ -51,12 +51,12 @@ $(document).ready(function() {
                 '<div id="' + continent.code + '-collapse" class="accordion-collapse collapse d-lg-block" aria-labelledby="' + continent.code + '-header">' +
                 '<div class="accordion-body">' +
                 '<div class="container-lg">';
-            
-            countries.forEach(function(country) {
-                var countryOffices = offices.filter(function(office) {
+
+            countries.forEach(function (country) {
+                var countryOffices = offices.filter(function (office) {
                     return office.country === country.code;
                 });
-                
+
                 html += '<div class="row country-wrapper">' +
                     '<div class="col-12">' +
                     '<h4 class="country-name"><img class="flag-img me-2" alt="' + country.nameEn + '" ' +
@@ -64,8 +64,8 @@ $(document).ready(function() {
                     country.name +
                     '<span class="number-office"> 新闻数 <span class="offices">' + country.offices + ' </span></span>' +
                     '</h4></div>';
-                
-                countryOffices.forEach(function(office) {
+
+                countryOffices.forEach(function (office) {
                     var officeDataAttr = JSON.stringify({
                         id: office.id,
                         latLng: office.latLng,
@@ -79,7 +79,7 @@ $(document).ready(function() {
                         lng: office.lng,
                         lat: office.lat
                     }).replace(/"/g, '&quot;');
-                    
+
                     html += '<div class="col-12 col-lg-6 d-flex flex-column">' +
                         '<div class="card office-card flex-fill">' +
                         '<div id="office-card-' + office.id + '" class="card-body office-card-body office-on-map" ' +
@@ -89,18 +89,18 @@ $(document).ready(function() {
                         '<div class="office-city">' + office.city + '</div>' +
                         '<div class="office-name"><b>' + office.name + '</b></div>' +
                         '<div class="office-contact">' +
-                        '<img src="static/picture/phone_icon.svg" alt="' + office.phone + ': ' + office.phoneLink + '">' +
-                        '<a href="tel:' + office.phoneLink + '">' + office.phone + '</a></div>' +
+                        '<img src="static/picture/news-admin.svg" alt="' + office.phone + ': ' + office.phoneLink + '">' +
+                        '<span >' + '发布者：上海吉罗卜供应链' + '</span></div>' +
                         '<div class="office-address">' +
-                        '<img src="static/picture/marker_icon.svg" alt="' + office.address.replace(/<br>/g, ' ') + '">' +
-                        '<span>' + office.address + '</span></div>' +
-                        '<div class="office-btn"><a class="btn btn-primary" href="/offices/' + office.slug + '">Show</a></div>' +
+                        '<img src="static/picture/news-time.svg" alt="' + office.address.replace(/<br>/g, ' ') + '">' +
+                        '<span>' + '时间：2026-04-03 10:00:00' + '</span></div>' +
+                        '<div class="office-btn"><a class="btn btn-primary" href="/look-news?id=' + office.id + '">阅读</a></div>' +
                         '</div></div></div></div>';
                 });
-                
+
                 html += '</div>';
             });
-            
+
             html += '</div></div></div></div>';
         });
         $('#continent-accordion').html(html);
@@ -109,7 +109,7 @@ $(document).ready(function() {
     // 渲染地图覆盖层办公室卡片
     function renderMapOverlay() {
         var html = '';
-        offices.forEach(function(office) {
+        offices.forEach(function (office) {
             html += '<div class="col-12" data-show="no-country" data-value="' + office.country + '" data-office-id="' + office.id + '">' +
                 '<div id="office-card-overlay-' + office.id + '" class="office-on-map">' +
                 '<div class="office-card-image-box" style="background-image: url(' + office.image + ')"></div>' +
@@ -117,17 +117,17 @@ $(document).ready(function() {
                 '<div class="office-card-info mv-10">' +
                 '<div class="office-name">' + office.name + '</div>' +
                 '<div class="office-contact">' +
-                '<img src="static/picture/phone_icon.svg" alt="' + office.phone + ': ' + office.phoneLink + '">' +
-                '<a href="tel:' + office.phoneLink + '">' + office.phone + '</a></div>' +
+                '<img src="static/picture/news-admin.svg" alt="' + office.phone + ': ' + office.phoneLink + '">' +
+                '<span >' + '发布者：上海吉罗卜供应链' + '</span></div>' +
                 '<div class="office-address">' +
-                '<img src="static/picture/marker_icon.svg" alt="' + office.address.replace(/<br>/g, ' ') + '">' +
-                '<span>' + office.address + '</span></div>' +
+                '<img src="static/picture/news-time.svg" alt="' + office.address.replace(/<br>/g, ' ') + '">' +
+                '<span>' + '时间：2026-04-03 10:00:00' + '</span></div>' +
                 '<div class="office-btn"><button class="btn btn-primary btn-office" data-office-id="' + office.id + '" ' +
-                'data-href="/offices/' + office.slug + '">Show</button></div>' +
+                'data-href="/look-news?id=' + office.id + '">阅读</button></div>' +
                 '</div></div></div>';
         });
         $('#map-offices').html(html);
-        console.log('66',$('#map-offices'));
+        console.log('66', $('#map-offices'));
     }
 
     // 初始化渲染

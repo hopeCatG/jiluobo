@@ -5,7 +5,7 @@ class MyNav extends HTMLElement {
         <ul id="menu_top_menu" class="">
           <li class="active current"><a href="/about-us" class="about_us-title-class" title="About Us" aria-label="About Us" id="menu_0" aria-labelledby="menu_0"> 关于我们</a></li>
           <li><a href="/services/services" class="services-title-class" title="Services" aria-label="Services" id="menu_1" aria-labelledby="menu_1"> 服务</a></li> 
-          <li><a href="/network" class="network-title-class" title="Network" aria-label="Network" id="menu_2" aria-labelledby="menu_2"> Network</a></li>
+          <li><a href="/news" class="network-title-class" title="Network" aria-label="Network" id="menu_2" aria-labelledby="menu_2"> Network</a></li>
           <li><a href="/vertical-markets" class="vertical_market-title-class" title="Vertical Markets" aria-label="Vertical Markets" id="menu_3" aria-labelledby="menu_3"> Vertical Markets</a></li>
           <li class="dropdown"><a href="/governance" class="governance-title-class" title="Governance" aria-label="Governance" id="menu_4" aria-labelledby="menu_4"> Governance</a>
             <ul class="dropdown-menu">

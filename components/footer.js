@@ -34,7 +34,7 @@ class MyFooter extends HTMLElement {
                             治理</a></li>
                         <li><a href="/sustainability" class="sustainability-title-class"
                             title="Sustainability" aria-label="Sustainability" id="menu_16"
-                            aria-labelledby="menu_16"> 可持续性</a></li>
+                            aria-labelledby="menu_16"> 企业文化</a></li>
                         <li>
                       </ul>
                     </div>
