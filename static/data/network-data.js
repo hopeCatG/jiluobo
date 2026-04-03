@@ -23,6 +23,35 @@ const offices = [
         lng: "105.0000000000",
         lat: "35.0000000000"
     },
+    {
+        id: 2,
+        name: "埋葬UI设计师的坟墓不是内卷，而是免费模式",
+        city: "伦敦",
+        // address: "269 Haining Road<br>Shanghai 200080, China Direct line: 86 - 21 - 65212616",
+        // phone: "+86 21 6522 2266",
+        // phoneLink: "+862165222266",
+        image: "static/images/dcs-sede-shanghai-39.jpg",
+        // slug: "shanghai",
+        country: "GB",
+        continent: "EU",
+        latLng: { type: "Point", coordinates: [-0.1276, 51.5074] },
+        lng: "105.0000000000",
+        lat: "35.0000000000"
+    },{
+        id: 3,
+        name: "金山电池公布“沪广深市民绿色生活方式”调查结果",
+        city: "洛杉矶",
+        // address: "269 Haining Road<br>Shanghai 200080, China Direct line: 86 - 21 - 65212616",
+        // phone: "+86 21 6522 2266",
+        // phoneLink: "+862165222266",
+        image: "static/images/dcs-sede-shanghai-39.jpg",
+        // slug: "shanghai",
+        country: "US",
+        continent: "NA",
+        latLng: { type: "Point", coordinates: [-118.2437, 34.0522] },
+        lng: "105.0000000000",
+        lat: "35.0000000000"
+    },
 ];
 // -------------------- 渲染函数 --------------------
 
