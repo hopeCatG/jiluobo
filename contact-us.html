@@ -70,6 +70,8 @@
   <script
     src="static/js/vendors-node_modules_mapbox-gl_dist_mapbox-gl_js-node_modules_mapbox-gl_dist_mapbox-gl_css.js"></script>
   <script src="static/js/frontend-officepage.js"></script>
+  <script src="static/js/jquery-2.1.3.min.js"></script>
+  <script src="static/data/api.js"></script>
 </head>
 
 <body class="b--desktop">
@@ -140,11 +142,12 @@
                 }
               </style>
               <div class="contact-form container">
-                <form name="contact" method="post" action="/contact/new">
+                <form name="contact" method="post" >
                   <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                      <div class="form-group"><label class="sr-only required" for="contact_requestType">请求类型</label><select id="contact_requestType" name="contact[requestType]" required="required"
-                          class="form-control">
+                      <div class="form-group"><label class="sr-only required"
+                          for="contact_requestType">请求类型</label><select id="contact_requestType"
+                          name="contact[type]" required="required" class="form-control">
                           <option value="" selected="selected">请选择请求类型</option>
                           <option value="generic">一般咨询</option>
                           <option value="quote">报价咨询</option>
@@ -153,34 +156,37 @@
                   </div>
                   <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                      <div class="form-group"><label class="sr-only" for="contact_subject">主题</label><input
-                          type="text" id="contact_subject" name="contact[subject]" maxlength="255"
-                          placeholder="主题" rows="5" class="form-control" /></div>
-                      <div class="form-group"><label class="sr-only" for="contact_name">姓名</label><input
-                          type="text" id="contact_name" name="contact[name]" maxlength="255" placeholder="姓名"
+                      <div class="form-group"><label class="sr-only" for="contact_subject">主题</label><input type="text"
+                          id="contact_subject" name="contact[theme]" maxlength="255" placeholder="主题" rows="5"
+                          class="form-control" /></div>
+                      <div class="form-group"><label class="sr-only" for="contact_name">姓名</label><input type="text"
+                          id="contact_name" name="contact[name]" maxlength="255" placeholder="姓名"
                           class="form-control" /></div>
                       <div class="form-group"><label class="sr-only required" for="contact_email">邮箱 *</label><input
                           type="email" id="contact_email" name="contact[email]" required="required"
                           placeholder="Email邮箱 *" class="form-control" /></div>
                       <div class="form-group"><label class="sr-only required" for="contact_phone">手机号 *</label><input
-                          type="text" id="contact_phone" name="contact[phone]" required="required" maxlength="255"
+                          type="text" id="contact_phone" name="contact[mobile]" required="required" maxlength="255"
                           placeholder="手机号 *" class="form-control" /></div>
                       <div id="company_field_group_wrapper"></div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                       <div id="quote_field_group_wrapper"></div>
                       <div class="form-group"><label class="sr-only required" for="contact_message">咨询内容
-                          *</label><textarea id="contact_message" name="contact[message]" required="required"
+                          *</label><textarea id="contact_message" name="contact[content]" required="required"
                           placeholder="咨询内容 *" rows="11" class="form-control"></textarea></div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-8 col-md-12 col-xs-12 privacy">
                       <div class="form-group">
-                        <div class="form-check" style="padding: 10px; background: #f8f9fa; border-radius: 8px; border: 2px solid #e9ecef; transition: all 0.3s ease;">
-                          <input type="checkbox" id="contact_privacy" name="contact[privacy]"
-                            class="form-check-input" value="1" style="width: 18px; height: 18px; cursor: pointer;margin-left: 5px;margin-right: 5px;" />
-                          <label class="form-check-label" for="contact_privacy" style="cursor: pointer; font-size: 14px; color: #555;">
+                        <div class="form-check"
+                          style="padding: 10px; background: #f8f9fa; border-radius: 8px; border: 2px solid #e9ecef; transition: all 0.3s ease;">
+                          <input type="checkbox" id="contact_privacy" name="contact[privacy]" class="form-check-input"
+                            value="1"
+                            style="width: 18px; height: 18px; cursor: pointer;margin-left: 5px;margin-right: 5px;" />
+                          <label class="form-check-label" for="contact_privacy"
+                            style="cursor: pointer; font-size: 14px; color: #555;">
                             所提供的数据仅用于回复已转发的请求。
                           </label>
                         </div>
@@ -192,15 +198,17 @@
                       <script>
                         var grecaptchaInput = document.getElementById('contact_captchaCode');
                         grecaptchaInput.value = ''; // Always reset the value to get a brand new challenge
-                      </script><button type="button" id="form-submit"
-                        class="btn btn-primary btn-lg btn-form-action" style="
+                      </script><button type="button" id="form-submit" class="btn btn-primary btn-lg btn-form-action"
+                        style="
                           padding: 12px 35px;
                           font-size: 16px;
                           font-weight: 600;
                           border-radius: 8px;
                           transition: all 0.3s ease;
                           box-shadow: 0 4px 6px rgba(0,123,255,0.2);
-                        " onmouseover="$(this).css({'transform': 'translateY(-2px)', 'box-shadow': '0 6px 12px rgba(0,123,255,0.3)'})" onmouseout="$(this).css({'transform': 'translateY(0)', 'box-shadow': '0 4px 6px rgba(0,123,255,0.2)'})">提交</button>
+                        "
+                        onmouseover="$(this).css({'transform': 'translateY(-2px)', 'box-shadow': '0 6px 12px rgba(0,123,255,0.3)'})"
+                        onmouseout="$(this).css({'transform': 'translateY(0)', 'box-shadow': '0 4px 6px rgba(0,123,255,0.2)'})">提交</button>
                     </div>
                   </div>
                   <div id="contact">
@@ -210,10 +218,8 @@
                         type="hidden" id="contact_service" name="contact[service]" /></div>
                     <div class="form-group"><label class="sr-only"
                         for="contact_certification">Certification</label><input type="hidden" id="contact_certification"
-                        name="contact[certification]" /></div><input type="hidden" id="contact__token"
-                      name="contact[_token]"
-                      value="da76a95f0a7f74ec60be97395fc4576.3otmr7Xm0X-RpFHYb6EeiVi_L9veYWLGqV8G5h65GbI.utwEnsaKnhjo6zy7O_B2xW3uHa6bBxit3TZ8qnvcd4Gf3jLN2bCeKMbqCA" />
-                  </div>
+                        name="contact[certification]" /></div>
+                    </div>
                 </form>
               </div>
               <script type="text/javascript">

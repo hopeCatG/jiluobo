@@ -2423,15 +2423,15 @@ textarea.form-control-lg {
   border-color: #0d6efd;
 }
 .form-check-input:checked[type=checkbox] {
-  --bs-form-check-bg-image: url("../fonts/87db5cd3ed6346d8a996dbfcb5e4438e.woff");
+  /* --bs-form-check-bg-image: url("../fonts/87db5cd3ed6346d8a996dbfcb5e4438e.woff"); */
 }
 .form-check-input:checked[type=radio] {
-  --bs-form-check-bg-image: url("../fonts/654b216f8892412a83b7794dcf0be469.woff");
+  /* --bs-form-check-bg-image: url("../fonts/654b216f8892412a83b7794dcf0be469.woff"); */
 }
 .form-check-input[type=checkbox]:indeterminate {
   background-color: #0d6efd;
   border-color: #0d6efd;
-  --bs-form-check-bg-image: url("../images/86f70485b36947fe96882ada68a46edd.gif");
+  /* --bs-form-check-bg-image: url("../images/86f70485b36947fe96882ada68a46edd.gif"); */
 }
 .form-check-input:disabled {
   pointer-events: none;

@@ -129,4 +129,13 @@ window.API = {
     getContinentsData() {
         return this.request(`/article/continentsData`);
     },
+    /**
+     * 提交咨询
+     */
+    submitConsult(params) {
+        return this.request(`/consult/add`, {
+            data: params,
+            method: 'POST'
+        });
+    }
 };

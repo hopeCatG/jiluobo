@@ -9,49 +9,17 @@ let continentsData = [
 
 const offices = [
     {
-        id: 1,
-        name: "上海西雅国际食品和饮料展览会6",
+        id: 1112626,
+        name: "初始化防报错",
         city: "上海",
-        // address: "269 Haining Road<br>Shanghai 200080, China Direct line: 86 - 21 - 65212616",
-        // phone: "+86 21 6522 2266",
-        // phoneLink: "+862165222266",
         image: "static/images/dcs-sede-shanghai-39.jpg",
-        // slug: "shanghai",
-        country: "CN",
-        continent: "AS",
+        country: "CN11",
+        continent: "AS11",
         latLng: { type: "Point", coordinates: [121.48030856831, 31.247523564039] },
         lng: "105.0000000000",
         lat: "35.0000000000"
     },
-    {
-        id: 2,
-        name: "埋葬UI设计师的坟墓不是内卷，而是免费模式",
-        city: "伦敦",
-        // address: "269 Haining Road<br>Shanghai 200080, China Direct line: 86 - 21 - 65212616",
-        // phone: "+86 21 6522 2266",
-        // phoneLink: "+862165222266",
-        image: "static/images/dcs-sede-shanghai-39.jpg",
-        // slug: "shanghai",
-        country: "GB",
-        continent: "EU",
-        latLng: { type: "Point", coordinates: [-0.1276, 51.5074] },
-        lng: "105.0000000000",
-        lat: "35.0000000000"
-    },{
-        id: 3,
-        name: "金山电池公布“沪广深市民绿色生活方式”调查结果",
-        city: "洛杉矶",
-        // address: "269 Haining Road<br>Shanghai 200080, China Direct line: 86 - 21 - 65212616",
-        // phone: "+86 21 6522 2266",
-        // phoneLink: "+862165222266",
-        image: "static/images/dcs-sede-shanghai-39.jpg",
-        // slug: "shanghai",
-        country: "US",
-        continent: "NA",
-        latLng: { type: "Point", coordinates: [-118.2437, 34.0522] },
-        lng: "105.0000000000",
-        lat: "35.0000000000"
-    },
+   
 ];
 // -------------------- 渲染函数 --------------------
 
@@ -145,10 +113,10 @@ function renderTabContent() {
                     '<div class="office-name"><b>' + office.name + '</b></div>' +
                     '<div class="office-contact">' +
                     '<img src="static/picture/news-admin.svg" alt="">' +
-                    '<span >' + '发布者：上海吉罗卜供应链' + '</span></div>' +
+                    '<span >' + '发布者：' + office.author + '</span></div>' +
                     '<div class="office-address">' +
                     '<img src="static/picture/news-time.svg" alt="">' +
-                    '<span>' + '时间：2026-04-03 10:00:00' + '</span></div>' +
+                    '<span>' + '时间：' + office.post_time + '</span></div>' +
                     '<div class="office-btn"><a class="btn btn-primary" href="/look-news?id=' + office.id + '">阅读</a></div>' +
                     '</div></div></div></div>';
             });
@@ -173,10 +141,10 @@ function renderMapOverlay() {
             '<div class="office-name">' + office.name + '</div>' +
             '<div class="office-contact">' +
             '<img src="static/picture/news-admin.svg" alt="">' +
-            '<span >' + '发布者：上海吉罗卜供应链' + '</span></div>' +
+            '<span >' + '发布者：' + office.author + '</span></div>' +
             '<div class="office-address">' +
             '<img src="static/picture/news-time.svg" alt="">' +
-            '<span>' + '时间：2026-04-03 10:00:00' + '</span></div>' +
+            '<span>' + '时间：' + office.post_time + '</span></div>' +
             '<div class="office-btn"><button class="btn btn-primary btn-office" data-office-id="' + office.id + '" ' +
             'data-href="/look-news?id=' + office.id + '">阅读</button></div>' +
             '</div></div></div>';
@@ -189,7 +157,20 @@ async function initMapData() {
     try {
         const { data } = await API.getContinentsData();
         continentsData = data;
+        const resList = await API.getArticleList({page_no: 1, page_size: 100});
+        console.log(resList.data.lists);
+        resList.data.lists.forEach(function (item) {
+            let latLng = JSON.parse(item.latLng); // 将字符串解析为对象
+            offices.push({
+                ...item,
+                name: item.title,
+                latLng:latLng,
+                lng:latLng?.coordinates?.[0],
+                lat:latLng?.coordinates?.[1],
 
+            });
+        });
+        console.log('offices',offices);
         renderNavTabs();
         renderAccordion();
         renderTabContent();
