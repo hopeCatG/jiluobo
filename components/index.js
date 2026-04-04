@@ -20,7 +20,7 @@ import './booking-service.js'
 
 
 // 当前发布的版本号（每次更新必须改）
-const CURRENT_VERSION = "1.0.2";
+const CURRENT_VERSION = "1.0.03";
 
 // 从 localStorage 读取上一次保存的版本号
 const storedVersion = localStorage.getItem("site_version");
