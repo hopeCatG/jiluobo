@@ -23,17 +23,13 @@ $(document).ready(function () {
   const officePageMap = new (mapbox_gl_dist_mapbox_gl__WEBPACK_IMPORTED_MODULE_0___default().Map)({
     container: 'office-page-map',
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-    // style: 'mapbox://styles/mapbox/outdoors-v12',
+    style: 'mapbox://styles/mapbox/streets-v12',
     zoom: 16,
     center: [office.latLng.coordinates[0], office.latLng.coordinates[1]],
     projection: 'globe',
     scrollZoom: false
   });
-  const el = document.createElement('div');
-  el.className = 'marker';
-
-  // make a marker for each feature and add to the map
-  new (mapbox_gl_dist_mapbox_gl__WEBPACK_IMPORTED_MODULE_0___default().Marker)(el).setLngLat([office.latLng.coordinates[0], office.latLng.coordinates[1]]).addTo(officePageMap);
+  new (mapbox_gl_dist_mapbox_gl__WEBPACK_IMPORTED_MODULE_0___default().Marker)().setLngLat([office.latLng.coordinates[0], office.latLng.coordinates[1]]).addTo(officePageMap);
 });
 
 /***/ }),

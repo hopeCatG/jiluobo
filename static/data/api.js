@@ -1,6 +1,6 @@
 // api.js
 
-const BASE_URL = 'https://globaljlbadmin.skyblue.chat/api';
+const BASE_URL = 'https://jlbAdmin.skyblue.chat/api';
 
 window.API = {
     /**

@@ -22,20 +22,13 @@ class MyFooter extends HTMLElement {
                 <div class="row">
                   <div class="col-md-4 col-footer">
                     <div class="widget">
-                      <div class="widget-title">萝卜吉</div>
+                      <div class="widget-title">吉萝卜</div>
                       <ul class="list">
                         <li><a href="/about-us" class="about_us-title-class" title="About Us"
                             aria-label="About Us" id="menu_13" aria-labelledby="menu_13">关于我们</a></li>
                         <li><a href="/vertical-markets" class="vertical_market-title-class"
                             title="Vertical Markets" aria-label="Vertical Markets" id="menu_14"
-                            aria-labelledby="menu_14">垂直市场</a></li>
-                        <li><a href="/governance" class="governance-title-class" title="Governance"
-                            aria-label="Governance" id="menu_15" aria-labelledby="menu_15">
-                            治理</a></li>
-                        <li><a href="/sustainability" class="sustainability-title-class"
-                            title="Sustainability" aria-label="Sustainability" id="menu_16"
-                            aria-labelledby="menu_16"> 企业文化</a></li>
-                        <li>
+                            aria-labelledby="menu_14">产品服务</a></li>
                       </ul>
                     </div>
                   </div>
@@ -48,7 +41,7 @@ class MyFooter extends HTMLElement {
                             aria-labelledby="menu_18">海运</a></li>
                         <li><a href="/services/land-freight" class="services-by_land-title-class"
                             title="Land Freight" aria-label="Land Freight" id="menu_19"
-                            aria-labelledby="menu_19"> 陆路货运</a></li>
+                            aria-labelledby="menu_19"> 陆运</a></li>
                         <li><a href="/services/air-freight" class="services-by_air-title-class"
                             title="Air Freight" aria-label="Air Freight" id="menu_20"
                             aria-labelledby="menu_20">空运</a></li>
@@ -67,9 +60,6 @@ class MyFooter extends HTMLElement {
                         <li><a href="/code-of-ethics" class="governance-ethical_code-title-class"
                             title="Code of Ethics" aria-label="Code of Ethics" id="menu_22"
                             aria-labelledby="menu_22">道德准则</a></li>
-                        <li><a href="/privacy-policy" class="privacy_policy-title-class"
-                            title="Privacy Policy" aria-label="Privacy Policy" id="menu_23"
-                            aria-labelledby="menu_23">隐私政策</a></li>
                       </ul>
                     </div>
                   </div>
@@ -80,7 +70,7 @@ class MyFooter extends HTMLElement {
         </div>
         <div class="copyright-content">
           <div class="container">
-            <div class="copyright-text text-center">24小时热线电话 400-662-6939</div>
+            <div class="copyright-text text-center">24小时热线电话 021-60810778</div>
           </div>
         </div>
       </footer>
