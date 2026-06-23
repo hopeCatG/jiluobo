@@ -28,7 +28,7 @@ class MyBookingService extends HTMLElement {
                             <div class="icon" data-animate="pulse infinite"><a href="#"><img
                                         src="../static/picture/icon-computer-service.svg" alt="IT Services"></a></div>
                             <h3>英欧美进出口</h3>
-                            <p>吉罗卜以鹿特丹与汉堡为欧洲门户，依托多式联运网络辐射欧洲全域，并进一步延伸至北美市场，为客户提供跨大西洋的综合性物流解决方案。</p>
+                            <p>吉罗卜以鹿特丹与汉堡为欧洲战略门户，依托密集的多式联运网络，不仅实现欧洲全域的高效分拨，更以此为支点，深度联动北美市场。我们专注于跨大西洋航线，提供覆盖欧洲出口、美国进口及逆向物流的全链路综合性解决方案。</p>
                         </div>
                     </div>
                 </div>

@@ -41,4 +41,4 @@ class MyQuality extends HTMLElement {
     `
   }
 }
-customElements.define('my-quality', MyQuality)
+// customElements.define('my-quality', MyQuality)
