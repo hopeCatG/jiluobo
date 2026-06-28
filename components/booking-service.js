@@ -5,7 +5,7 @@ class MyBookingService extends HTMLElement {
             <section>
             <div class="container">
                 <h3 class="text-center">全球订舱服务</h3>
-                <h3 class="service-copyright-text text-center">服务热线 400-662-6939</h3>
+                <h3 class="service-copyright-text text-center">服务热线 021-60810778</h3>
                 <div class="row gy-5 mt-60">
                     <div class="col-lg-4">
                         <div class="icon-box medium fancy">
@@ -27,8 +27,8 @@ class MyBookingService extends HTMLElement {
                         <div class="icon-box medium fancy">
                             <div class="icon" data-animate="pulse infinite"><a href="#"><img
                                         src="../static/picture/icon-computer-service.svg" alt="IT Services"></a></div>
-                            <h3>欧洲进出口航线</h3>
-                            <p>吉罗卜以鹿特丹和汉堡作为核心枢纽，依托多式联运的物流运输方式覆盖了欧洲主要国家，我们充分发挥海运与空运的优势，有效控制运营成本，为客户提供具有竞争力的物流解决方案。</p>
+                            <h3>英欧美进出口</h3>
+                            <p>吉罗卜以鹿特丹与汉堡为欧洲战略门户，依托密集的多式联运网络，不仅实现欧洲全域的高效分拨，更以此为支点，深度联动北美市场。我们专注于跨大西洋航线，提供覆盖欧洲出口、美国进口及逆向物流的全链路综合性解决方案。</p>
                         </div>
                     </div>
                 </div>
