@@ -157,13 +157,13 @@ async function initMapData() {
     try {
         const { data } = await API.getContinentsData();
         continentsData = data;
-        const resList = await API.getArticleList({page_no: 1, page_size: 100});
+        const resList = await API.getMapLists({page_no: 1, page_size: 100});
         console.log(resList.data.lists);
         resList.data.lists.forEach(function (item) {
-            let latLng = JSON.parse(item.latLng); // 将字符串解析为对象
+            let latLng = JSON.parse(item.lat_lng); // 将字符串解析为对象
             offices.push({
                 ...item,
-                name: item.title,
+                name: item.city_name,
                 latLng:latLng,
                 lng:latLng?.coordinates?.[0],
                 lat:latLng?.coordinates?.[1],
@@ -174,7 +174,7 @@ async function initMapData() {
         renderNavTabs();
         renderAccordion();
         renderTabContent();
-        renderMapOverlay();
+        // renderMapOverlay();
 
         await loadScript('static/js/frontend-globe.js');
         await loadScript('static/js/oimmei.js');

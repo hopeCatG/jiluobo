@@ -130,6 +130,14 @@ window.API = {
         return this.request(`/article/continentsData`);
     },
     /**
+     * 网点地图列表
+     */
+    getMapLists(params) {
+        return this.request(`/article/mapLists`, {
+            data: params
+        });
+    },
+    /**
      * 提交咨询
      */
     submitConsult(params) {
