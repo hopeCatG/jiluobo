@@ -9,7 +9,7 @@ class MyQuality extends HTMLElement {
                         <div class="col-lg-4">
                             <div class="description">
                                 <h3 class="cta">质量</h3>
-                                吉萝卜
+                                吉罗卜
                                 致力于为客户提供安全优质的服务，这也体现在其获得的认证和针对特定技能的定期更新中，如：管理和流程咨询、信用证验证、危险品咨询、综合物流培训和研讨会。<br><br>
                                 我们的质量政策可通过以下链接的PDF格式获取：
 

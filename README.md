@@ -1,5 +1,5 @@
 # 项目介绍
-吉萝卜官网
+吉罗卜官网
 
 - 参考 https://www.delcoronascardigli.com 
 - 原 https://a.phpxue.xyz/aboutus/

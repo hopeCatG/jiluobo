@@ -22,7 +22,7 @@ class MyFooter extends HTMLElement {
                 <div class="row">
                   <div class="col-md-4 col-footer">
                     <div class="widget">
-                      <div class="widget-title">吉萝卜</div>
+                      <div class="widget-title">吉罗卜</div>
                       <ul class="list">
                         <li><a href="/about-us" class="about_us-title-class" title="About Us"
                             aria-label="About Us" id="menu_13" aria-labelledby="menu_13">关于我们</a></li>
