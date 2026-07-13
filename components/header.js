@@ -4,7 +4,7 @@ class MyHeader extends HTMLElement {
     this.innerHTML = `
       <header id="header" data-responsive-fixed="true" class="">
         <div class="header-inner">
-          <div class="container" style="margin-left:35%;">
+          <div class="container" >
             <div id="logo"><a href="/" class="logo" data-src-dark="/build/logo_2023.png"><img
                         src="/static/picture/logo_2023.png" alt="Logo" class="logo-default"></a></div>
             <!--Header Extras-->
