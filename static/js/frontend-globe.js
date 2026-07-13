@@ -385,6 +385,38 @@ $(document).ready(function () {
         });
       }
     });
+    $('#continent-accordion').on('click', '.office-on-map', function (e) {
+      if ($(e.target).closest('a, button').length > 0) {
+        return;
+      }
+      let officeData = $(this).attr('data-office');
+      if (!officeData) {
+        return;
+      }
+      try {
+        officeData = JSON.parse(officeData);
+      } catch (error) {
+        console.error('office data parse error', error);
+        return;
+      }
+      if (!officeData.latLng || !officeData.latLng.coordinates) {
+        return;
+      }
+      map.flyTo({
+        center: officeData.latLng.coordinates,
+        zoom: 10,
+        bearing: 0,
+        pitch: 35
+      }, {
+        mode: 'flyTo'
+      });
+      const $map = $('#network-map');
+      if ($map.length) {
+        $('html, body').animate({
+          scrollTop: $map.offset().top - 80
+        }, 300);
+      }
+    });
     $('#map-offices').on('click', '.btn-office', function () {
       let officeId = $(this).data('office-id');
       let link = $(this).data('href');

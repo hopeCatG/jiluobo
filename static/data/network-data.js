@@ -86,9 +86,8 @@ function renderTabContent() {
                 '<h4 class="country-name"><img class="flag-img me-2" alt="' + country.name_en + '" ' +
                 'src="' + country.flag + '"> ' +
                 country.name +
-                '<span class="number-office"> 新闻数 <span class="offices">' + country.offices + ' </span></span>' +
+                '<span class="number-office"> 网点数 <span class="offices">' + countryOffices.length + ' </span></span>' +
                 '</h4></div>';
-
             countryOffices.forEach(function (office) {
                 var officeDataAttr = JSON.stringify({
                     id: office.id,
@@ -96,8 +95,10 @@ function renderTabContent() {
                     name: office.name,
                     continent: office.continent,
                     country: office.country,
-                    countryName: country.name_en,
-                    city: office.city,
+                    countryName: country.name,
+                    continentName: continent.name,
+                    city: office.city_name || office.city || office.name,
+                    address: office.address,
                     slug: office.slug,
                     lng: office.lng,
                     lat: office.lat
@@ -106,18 +107,13 @@ function renderTabContent() {
                 html += '<div class="col-12 col-lg-6 d-flex flex-column">' +
                     '<div class="card office-card flex-fill">' +
                     '<div id="office-card-' + office.id + '" class="card-body office-card-body office-on-map" ' +
-                    'data-office="' + officeDataAttr + '">' +
-                    '<div class="office-card-image-wrapper" style="background-image: url(' + office.image + ')"></div>' +
+                    'data-office="' + officeDataAttr + '" style="cursor: pointer;">' +
                     '<div class="office-card-info">' +
-                    '<div class="office-city">' + office.city + '</div>' +
-                    '<div class="office-name"><b>' + office.name + '</b></div>' +
-                    '<div class="office-contact">' +
-                    '<img src="static/picture/news-admin.svg" alt="">' +
-                    '<span >' + '发布者：' + office.author + '</span></div>' +
-                    '<div class="office-address">' +
-                    '<img src="static/picture/news-time.svg" alt="">' +
-                    '<span>' + '时间：' + office.post_time + '</span></div>' +
-                    '<div class="office-btn"><a class="btn btn-primary" href="/look-news?id=' + office.id + '">阅读</a></div>' +
+                    '<div class="office-name"><b>网点信息</b></div>' +
+                    '<div class="office-address"><span><b>州名：</b>' + continent.name + '</span></div>' +
+                    '<div class="office-address"><span><b>国家：</b>' + country.name + '</span></div>' +
+                    '<div class="office-address"><span><b>网点名：</b>' + (office.city_name || office.city || office.name || '-') + '</span></div>' +
+                    '<div class="office-address"><span><b>地址：</b>' + (office.address || '-') + '</span></div>' +
                     '</div></div></div></div>';
             });
 
