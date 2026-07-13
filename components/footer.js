@@ -53,16 +53,6 @@ class MyFooter extends HTMLElement {
                       </ul>
                     </div>
                   </div>
-                  <div class="col-md-4 col-footer">
-                    <div class="widget">
-                      <div class="widget-title">遵守</div>
-                      <ul class="list">
-                        <li><a href="/code-of-ethics" class="governance-ethical_code-title-class"
-                            title="Code of Ethics" aria-label="Code of Ethics" id="menu_22"
-                            aria-labelledby="menu_22">道德准则</a></li>
-                      </ul>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
