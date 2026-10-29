@@ -12,7 +12,7 @@ a.btn:not([href]):not([tabindex]) {
 }
 
 .sidebar-menu {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
 }
 
 .map-wrapper {
@@ -56,7 +56,7 @@ a.btn:not([href]):not([tabindex]) {
 }
 
 .continent-name {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   font-weight: 400;
   font-size: medium;
   padding-bottom: 0;
@@ -85,7 +85,7 @@ a.btn:not([href]):not([tabindex]) {
 }
 .country-name .number-office {
   font-size: 1.428rem;
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   color: #002E5F;
   text-transform: uppercase;
   float: right;
@@ -148,7 +148,7 @@ a.btn:not([href]):not([tabindex]) {
 }
 
 .sidebar-menu {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
 }
 
 .map-container, .list-container {

@@ -23746,7 +23746,7 @@ a.btn:not([href]):not([tabindex]) {
 }
 
 .sidebar-menu {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
 }
 
 body {
@@ -23760,7 +23760,7 @@ div.heading-text {
 }
 
 h1.h2 {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   color: #002E5F;
   margin-bottom: 0;
   text-align: center;
@@ -23901,7 +23901,7 @@ button.btn.btn-lg, .btn:not(.close):not(.mfp-close).btn-lg, a.btn:not([href]):no
 }
 
 div.breadcrumb {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   color: #002E5F !important;
   font-size: 1.704rem !important;
   text-align: center;
@@ -23917,7 +23917,7 @@ div.breadcrumb ul li + li::before {
   vertical-align: bottom;
 }
 div.breadcrumb ul li a {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   color: #002E5F !important;
   font-size: 1.704rem !important;
   text-align: center;
@@ -23928,7 +23928,7 @@ div.breadcrumb ul li a {
 }
 
 #page-title {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   background-color: #D7DEF2;
   padding-top: 0;
   padding-bottom: 0;
@@ -24023,7 +24023,7 @@ div.breadcrumb ul li a {
 
 .offices-count {
   font-size: 12px;
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   color: #75A843;
   text-transform: uppercase;
 }
@@ -24052,7 +24052,7 @@ div.breadcrumb ul li a {
 }
 
 h5.ac-title {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   padding-left: 10px;
   color: #002E5F;
 }
@@ -24071,14 +24071,14 @@ div.ac-content {
   color: #777777;
 }
 div.ac-content div.office-name {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   font-size: medium;
   padding-left: 10px;
   padding-bottom: 10px;
 }
 @media (max-width: 767px) {
   div.ac-content div.office-name {
-    font-family: "Barlow", sans-serif;
+    font-family: "cursive", sans-serif;
   }
 }
 div.ac-content .office-address {
@@ -24086,19 +24086,19 @@ div.ac-content .office-address {
   align-items: baseline;
   gap: 8px;
   padding-left: 10px;
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   padding-bottom: 10px;
   font-size: smaller;
 }
 @media (max-width: 767px) {
   div.ac-content .office-address {
-    font-family: "Barlow", sans-serif;
+    font-family: "cursive", sans-serif;
     padding-left: 5px;
     padding-bottom: 0;
   }
 }
 div.ac-content div.network-services {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   font-size: medium;
   padding-left: 10px;
   padding-top: 15px;
@@ -24106,21 +24106,21 @@ div.ac-content div.network-services {
 }
 @media (max-width: 767px) {
   div.ac-content div.network-services {
-    font-family: "Barlow", sans-serif;
+    font-family: "cursive", sans-serif;
   }
 }
 div.ac-content div.service-name {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   padding-left: 10px;
   font-size: smaller;
 }
 @media (max-width: 767px) {
   div.ac-content div.service-name {
-    font-family: "Barlow", sans-serif;
+    font-family: "cursive", sans-serif;
   }
 }
 div.ac-content div.button {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   padding-left: 10px;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -24128,7 +24128,7 @@ div.ac-content div.button {
 }
 @media (max-width: 767px) {
   div.ac-content div.button {
-    font-family: "Barlow", sans-serif;
+    font-family: "cursive", sans-serif;
   }
 }
 div.ac-content div.button a.btn {

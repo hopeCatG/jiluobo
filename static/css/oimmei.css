@@ -20,7 +20,7 @@ a.btn:not([href]):not([tabindex]) {
 }
 
 .sidebar-menu {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
 }
 
 /*-------------------------------------------------------------------*/
@@ -105,7 +105,7 @@ a.btn:not([href]):not([tabindex]) {
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-root-font-size: 14px;
-  --bs-body-font-family: "Barlow", sans-serif;
+  --bs-body-font-family: "cursive", sans-serif;
   --bs-body-font-size: calc(1.2678rem + 0.2136vw);
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -5855,7 +5855,7 @@ textarea.form-control-lg {
   z-index: var(--bs-tooltip-zindex);
   display: block;
   margin: var(--bs-tooltip-margin);
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5965,7 +5965,7 @@ textarea.form-control-lg {
   z-index: var(--bs-popover-zindex);
   display: block;
   max-width: var(--bs-popover-max-width);
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -12115,7 +12115,7 @@ a.btn:not([href]):not([tabindex]) {
 }
 
 .sidebar-menu {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
 }
 
 section {
@@ -12290,7 +12290,7 @@ section.dark,
   padding: 0;
 }
 #page-title .page-title > h1 {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   font-size: 2.5rem;
   line-height: 1.2;
   font-weight: 400;
@@ -13746,7 +13746,7 @@ Main Menu
 }
 #mainMenu nav > ul > li > a {
   position: relative;
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   padding: 10px 12px;
   text-transform: uppercase;
   font-size: 1.4em;
@@ -13826,7 +13826,7 @@ Main Menu
   font-weight: 500;
   font-style: normal;
   color: #444;
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   padding: 12px 20px 12px 18px;
   display: block;
   transition: 0.3s ease;
@@ -13875,7 +13875,7 @@ Main Menu
   padding: 20px;
 }
 #mainMenu nav > ul > li.mega-menu-item .mega-menu-content .mega-menu-title {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   color: #000;
   font-size: 0.923em;
   line-height: 0.994em;
@@ -14895,7 +14895,7 @@ Main Menu: Responsive
 }
 .header-extras > ul > li > a:not(.btn),
 .header-extras > ul > li .topbar-dropdown > .title {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   font-size: 0.852em;
   position: relative;
   display: block;
@@ -15591,7 +15591,7 @@ Page Menu
   display: inline-block;
   float: none;
   padding: 0px 2px;
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
 }
 .page-menu nav > ul > li:last-child {
   margin-right: 0;
@@ -15636,7 +15636,7 @@ Page Menu
   position: absolute;
   text-align: left;
   list-style: none;
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   padding: 14px 20px;
   width: auto;
   top: 50px;
@@ -15907,7 +15907,7 @@ body:not(.breakpoint-xs):not(.breakpoint-sm):not(.breakpoint-md) .page-menu nav 
   }
 }
 .sidebar-menu {
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
 }
 .sidebar-menu label {
   display: block;
@@ -15990,7 +15990,7 @@ body {
   line-height: 1.65714286em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
   color: #9EA4B5;
 }
 
@@ -16128,7 +16128,7 @@ p {
   line-height: 1.7;
   letter-spacing: 0;
   color: #9EA4B5;
-  font-family: "Barlow", sans-serif;
+  font-family: "cursive", sans-serif;
 }
 
 ul.bullets {
